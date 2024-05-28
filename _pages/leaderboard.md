@@ -13,6 +13,8 @@ related_posts: false
 
 > To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard. This is a cross between the previous [GENEA Challenges in gesture generation](https://svito-zar.github.io/GENEAchallenge2023/) and recent leaderboards in NLP and computer vision, such as [Chatbot Arena](https://chat.lmsys.org/?leaderboard) and [HEIM](https://crfm.stanford.edu/helm/heim/v1.0.0/#/).
 
+<br>
+
 ## Our goals
 * Establish a **living benchmark** of gesture-generation models using **human evaluation**
 * Ensure **high reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
@@ -20,6 +22,7 @@ related_posts: false
 * **Unify gesture-generation** researchers from computer vision, computer graphics, machine learning, NLP, and HCI
 * Evolve with the community
 
+<br>
 
 ## Leaderboard setup
 Gesture-generation models are currently scattered across different datasets, and it is often difficult to successfully retrain someone else’s model on new data. 
@@ -43,6 +46,7 @@ The leaderboard is going to use the [BEAT-v2 dataset](https://pantomatrix.github
 
 Being a living leaderboard, the dataset used for benchmarking is expected to evolve in the future as newer datasets become available.
 
+<br>
 
 ## How to participate
 To participate in the evaluation, you will need to:
@@ -50,6 +54,7 @@ To participate in the evaluation, you will need to:
 2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
 3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
 
+<br>
 
 ## Evaluation methodology
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
@@ -70,9 +75,12 @@ To accurately quantify **motion appropriateness**, we will use a mismatching pro
 
 The leaderboard will also include all commonly used objective metrics and model properties such as size, memory usage, etc.
 
+<br>
+
 ## Timeline
 Our current plan is to gather submissions for the first evaluation until the **end of October**, and to launch the leaderboard by the end of the year.
 
+<br>
 
 ## Frequently asked questions
 * How are the evaluations funded?
@@ -85,6 +93,7 @@ Our current plan is to gather submissions for the first evaluation until the **e
     * This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
     * The leaderboard is designed to directly counter these issues.
 
+<br>
 
 ## Organisers
 <div class="row row-cols-2 projects pt-3 pb-3">
