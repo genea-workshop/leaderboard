@@ -14,10 +14,10 @@ related_posts: false
 > To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard. This is a cross between the previous [GENEA Challenges in gesture generation](https://svito-zar.github.io/GENEAchallenge2023/) and recent leaderboards in NLP and computer vision, such as [Chatbot Arena](https://chat.lmsys.org/?leaderboard) and [HEIM](https://crfm.stanford.edu/helm/heim/v1.0.0/#/).
 
 ## Our goals
-* Establish a living benchmark of gesture-generation models using human evaluation
-* Ensure high reproducibility by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
-* Develop better objective metrics based on the collected human ratings
-* Unify gesture-generation researchers from computer vision, computer graphics, machine learning, NLP, and HCI
+* Establish a **living benchmark** of gesture-generation models using **human evaluation**
+* Ensure **high reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
+* Develop **better objective metrics** based on the collected human ratings
+* **Unify gesture-generation** researchers from computer vision, computer graphics, machine learning, NLP, and HCI
 * Evolve with the community
 
 ## Leaderboard setup
