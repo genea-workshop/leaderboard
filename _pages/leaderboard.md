@@ -20,6 +20,7 @@ related_posts: false
 * **Unify gesture-generation** researchers from computer vision, computer graphics, machine learning, NLP, and HCI
 * Evolve with the community
 
+
 ## Leaderboard setup
 Gesture-generation models are currently scattered across different datasets, and it is often difficult to successfully retrain someone else’s model on new data. 
 
@@ -42,14 +43,15 @@ The leaderboard is going to use the [BEAT-v2 dataset](https://pantomatrix.github
 
 Being a living leaderboard, the dataset used for benchmarking is expected to evolve in the future as newer datasets become available.
 
+
 ## How to participate
 To participate in the evaluation, you will need to:
 1. Train your model on the [BEAT-v2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
 2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
 3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
 
-## Evaluation methodology
 
+## Evaluation methodology
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
 1. Motion naturalness
 2. Motion appropriateness for the speech
@@ -71,6 +73,7 @@ The leaderboard will also include all commonly used objective metrics and model 
 ## Timeline
 Our current plan is to gather submissions for the first evaluation until the **end of October**, and to launch the leaderboard by the end of the year.
 
+
 ## Frequently asked questions
 * How are the evaluations funded?
     * We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
@@ -82,6 +85,14 @@ Our current plan is to gather submissions for the first evaluation until the **e
     * This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
     * The leaderboard is designed to directly counter these issues.
 
+
 ## Organisers
-…
+<div class="row row-cols-2 projects pt-3 pb-3">
+  {% include people_horizontal.html name="Rajmund Nagy" affiliation="KTH Royal Institute of Technology, Sweden" url="https://nagyrajmund.github.io/" img="/assets/img/people/rajmund.png" %}
+  {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
+  {% include people_horizontal.html name="Teodor Nikolov" affiliation="motorica.ai, Sweden" url="https://www.linkedin.com/in/teodor-nikolov/" img="/assets/img/people/teodor.jfif" %}
+  {% include people_horizontal.html name="Taras Kucherenko" affiliation="Electronic Arts - SEED, Sweden" url="https://svito-zar.github.io/" img="assets/img/people/taras.jpg" %}
+  {% include people_horizontal.html name="Youngwoo Yoon" affiliation="ETRI, South Korea" img="assets/img/people/youngwoo.jpg" url="https://sites.google.com/view/youngwoo-yoon/" %}
+  {% include people_horizontal.html name="Gustav Henter" affiliation="KTH Royal Institute of Technology, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
+</div>
 
