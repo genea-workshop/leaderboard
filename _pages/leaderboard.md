@@ -50,17 +50,17 @@ To participate in the evaluation, you will need to:
 
 ## Evaluation methodology
 
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="https://genea-workshop.github.io/2023/challenge/visualiser.gif" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
-<figcaption><i>Example stimulus used in the GENEA Challenge 2023 dyadic speech appropriateness evaluation.</i></figcaption>
-</figure>
-
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
 1. Motion naturalness
 2. Motion appropriateness for the speech
 3. Emotional expression
 
-The human evaluation will use a standardised visualisation with a free and open-source mesh (i.e., not the SMPL-X mesh).
+<figure style="text-align: center; margin-bottom: 2em;">
+<img src="./assets/img/study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
+<figcaption><i>Evaluation interface for the user studies.</i></figcaption>
+</figure>
+
+The human evaluation will use a standardised visualisation with a free and open-source mesh.
 
 For **motion naturalness**, we will use an ELO-based system with pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
 
@@ -70,11 +70,6 @@ For **motion naturalness**, we will use an ELO-based system with pairwise compar
 </figure>
 
 To accurately quantify **motion appropriateness**, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646).
-
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/speech_approp_gui.png" alt="Image shows the HEMVIP interface for evaluating speech-appropriateness (motion appropriateness) used in GENEA Challenge 2023." width="80%"/>
-<figcaption><i>HEMVIP interface for evaluating speech appropriateness (motion appropriateness) in GENEA Challenge 2023.</i></figcaption>
-</figure>
 
 The leaderboard will also include all commonly used objective metrics and model properties such as size, memory usage, etc.
 
