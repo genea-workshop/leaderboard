@@ -56,18 +56,13 @@ We will recruit a large number of evaluators on a crowd-sourcing platform to con
 3. Emotional expression
 
 <figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
+<img src="./assets/img/user_study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
 <figcaption><i>Evaluation interface for the user studies.</i></figcaption>
 </figure>
 
 The human evaluation will use a standardised visualisation with a free and open-source mesh.
 
 For **motion naturalness**, we will use an ELO-based system with pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
-
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/human-likeness_gui.png" alt="Image shows the HEMVIP interface for evaluating human-likeness (motion naturalness) used in GENEA Challenge 2023." width="80%"/>
-<figcaption><i>HEMVIP interface for evaluating human-likeness (motion naturalness) in GENEA Challenge 2023.</i></figcaption>
-</figure>
 
 To accurately quantify **motion appropriateness**, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646).
 
