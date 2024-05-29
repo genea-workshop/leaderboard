@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Towards an online leaderboard for gesture generation
+title: Announcing the GENEA Leaderboard: an online benchmark for gesture generation
 date: 2024-05-17 10:00:00
 permalink: /
 description: An overview of the leaderboard initiative
@@ -15,7 +15,7 @@ related_posts: false
 
 <br>
 
-## Our goals
+<h2 style="color: #3979c0">Our goals</h2>
 * Establish a **living benchmark** of gesture-generation models using **human evaluation**
 * Ensure **high reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
 * Develop **better objective metrics** based on the collected human ratings
@@ -24,14 +24,14 @@ related_posts: false
 
 <br>
 
-## Leaderboard setup
+<h2 style="color: #3979c0">Leaderboard setup</h2>
 Gesture-generation models are currently scattered across different datasets, and it is often difficult to successfully retrain someone else’s model on new data. 
 
 To populate the leaderboard, we are currently inviting authors of up to 15 recent gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation.
 
 After this initial evaluation is completed, the leaderboard will become open to public submissions, and will be continuously updated by the GENEA team.
 
-### Dataset
+<h3 style="color: #3979c0">Dataset</h3>
 The leaderboard is going to use the English recordings of the [BEAT-v2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
 1. It’s the largest public mocap dataset of gesturing (with 60 hours of data)
 2. It has a high variety of speakers and emotions
@@ -48,7 +48,7 @@ Being a living leaderboard, the dataset used for benchmarking is expected to evo
 
 <br>
 
-## How to participate
+<h2 style="color: #3979c0">How to participate</h2>
 To participate in the evaluation, you will need to:
 1. Train your model on the [BEAT-v2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
 2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
@@ -56,7 +56,7 @@ To participate in the evaluation, you will need to:
 
 <br>
 
-## Evaluation methodology
+<h2 style="color: #3979c0">Evaluation methodology</h2>
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
 1. Motion naturalness
 2. Motion appropriateness for the speech
@@ -79,12 +79,12 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 
 <br>
 
-## Timeline
+<h2 style="color: #3979c0">Timeline</h2>
 Our current plan is to gather submissions for the first evaluation until the **end of October**, and to launch the leaderboard by the end of the year.
 
 <br>
 
-## Frequently asked questions
+<h2 style="color: #3979c0">Frequently Asked Questions</h2>
 * Why do we need a leaderboard?
     * Gesture generation research is currently fragmented across different datasets and evaluation protocols. 
     * Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature. 
@@ -96,7 +96,8 @@ Our current plan is to gather submissions for the first evaluation until the **e
 
 <br>
 
-## Organisers
+<h2 style="color: #3979c0">Organisers</h2>
+
 <div class="row row-cols-2 projects pt-3 pb-3">
   {% include people_horizontal.html name="Rajmund Nagy" affiliation="KTH Royal Institute of Technology, Sweden" url="https://nagyrajmund.github.io/" img="/assets/img/people/rajmund.png" %}
   {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
