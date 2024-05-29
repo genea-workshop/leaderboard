@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Announcing the GENEA Leaderboard: an online benchmark for gesture generation
+title: "Announcing the GENEA Leaderboard: an upcoming online benchmark for gesture generation"
 date: 2024-05-17 10:00:00
 permalink: /
 description: An overview of the leaderboard initiative
