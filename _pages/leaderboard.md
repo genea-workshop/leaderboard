@@ -32,9 +32,9 @@ To populate the leaderboard, we are currently inviting authors of up to 15 recen
 After this initial evaluation is completed, the leaderboard will become open to public submissions, and will be continuously updated by the GENEA team.
 
 ### Dataset
-The leaderboard is going to use the [BEAT-v2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
+The leaderboard is going to use the English recordings of the [BEAT-v2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
 1. It’s the largest public mocap dataset of gesturing (with 60 hours of data)
-2. High variety, with 8 emotions, 25 speakers, and 4 languages
+2. It has a high variety of speakers and emotions
 3. It includes semantic gesture annotations
 4. The SMPL-X format is compatible with many other datasets
 5. It also includes facial expressions (a possible future addition for the leaderboard)
@@ -62,18 +62,20 @@ We will recruit a large number of evaluators on a crowd-sourcing platform to con
 2. Motion appropriateness for the speech
 3. Emotional expression
 
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/user_study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
-<figcaption><i>Evaluation interface for the user studies.</i></figcaption>
-</figure>
 
-The human evaluation will use a standardised visualisation with a free and open-source mesh.
-
-For **motion naturalness**, we will use an ELO-based system with pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
+For **motion naturalness** and **emotional expression**, we will use an ELO-based ranking system based on pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
 
 To accurately quantify **motion appropriateness**, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646).
 
-The leaderboard will also include all commonly used objective metrics and model properties such as size, memory usage, etc.
+
+<figure style="text-align: center; margin-bottom: 2em;">
+<img src="./assets/img/user_study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
+<figcaption><i>A possible evaluation interface for the user studies.</i></figcaption>
+</figure>
+
+To standardise human evaluation, our tooling for running experiments will be released alongside the necessary visualisation scripts and 3D models.
+
+The leaderboard will also feature many commonly used objective metrics (e.g., FGD and beat consistency) as well as model properties such as size, memory usage, etc.
 
 <br>
 
@@ -83,15 +85,14 @@ Our current plan is to gather submissions for the first evaluation until the **e
 <br>
 
 ## Frequently asked questions
-* How are the evaluations funded?
-    * We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
-
 * Why do we need a leaderboard?
     * Gesture generation research is currently fragmented across different datasets and evaluation protocols. 
     * Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature. 
     * At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other. 
     * This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
     * The leaderboard is designed to directly counter these issues.
+* How are the evaluations funded?
+    * We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
 
 <br>
 
