@@ -11,8 +11,8 @@ related_posts: false
 <img src="./assets/img/genea-logo.png" alt="The GENEA Leaderboard logo" width="100%"/>
 </div>
 
-<p style="font-size:1.5em; font-weight: 500;">
-**Summary:** To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard based on large-scale human evaluation. This is a cross between the previous [GENEA Challenges in gesture generation](https://svito-zar.github.io/GENEAchallenge2023/) and recent leaderboards in NLP and computer vision, such as [Chatbot Arena](https://chat.lmsys.org/?leaderboard) and [HEIM](https://crfm.stanford.edu/helm/heim/v1.0.0/#/).
+<p style="font-size:1.1em;font-weight: 500;">
+<b>Summary:</b> To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard based on large-scale human evaluation. This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a> and recent leaderboards in NLP and computer vision, such as <a href="https://chat.lmsys.org/?leaderboard" rel="external nofollow noopener" target="_blank">Chatbot Arena</a> and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofollow noopener" target="_blank">HEIM</a>.
 </p>
 <br>
 
