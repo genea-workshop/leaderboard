@@ -82,19 +82,24 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 
 
 <h2 style="color: #3979c0">Frequently Asked Questions</h2>
-* Why do we need a leaderboard?
-    * Gesture generation research is currently fragmented across different datasets and evaluation protocols. 
-    * Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature. 
-    * At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other. 
-    * This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
-    * The leaderboard is designed to directly counter these issues.
-* How are the evaluations funded?
-    * We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
+<details>
+    <summary>Why do we need a leaderboard?</summary>
+    <ul>
+      <li>Gesture generation research is currently fragmented across different datasets and evaluation protocols.</li>
+      <li>Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature.</li>
+      <li>At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other.</li>
+      <li>This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.</li>
+      <li>The leaderboard is designed to directly counter these issues.</li>
+    </ul>
+</details>
 
+<details>
+    <summary>How are the evaluations funded?</summary>
+    <p>We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.</p>
+</details>
 <br>
 
 <h2 style="color: #3979c0">Organisers</h2>
-
 <div class="row row-cols-2 projects pt-3 pb-3">
   {% include people_horizontal.html name="Rajmund Nagy" affiliation="KTH Royal Institute of Technology, Sweden" url="https://nagyrajmund.github.io/" img="/assets/img/people/rajmund.png" %}
   {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
@@ -103,6 +108,11 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
   {% include people_horizontal.html name="Youngwoo Yoon" affiliation="ETRI, South Korea" img="assets/img/people/youngwoo.jpg" url="https://sites.google.com/view/youngwoo-yoon/" %}
   {% include people_horizontal.html name="Gustav Henter" affiliation="KTH Royal Institute of Technology, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
 </div>
+
+<h2 style="color: #3979c0">Scientific advisors</h2>
+{% include people_horizontal.html name="Rachel McDonnell" affiliation="Trinity College Dublin, Ireland" url="https://www.scss.tcd.ie/Rachel.McDonnell/" img="https://www.scss.tcd.ie/Rachel.McDonnell/images/Rachel01_SquareSmallc.jpg" %}
+{% include people_horizontal.html name="Stefan Kopp" affiliation="Bielefeld University, Germany" img="http://www.techfak.uni-bielefeld.de/~skopp/portrait-neu-klein.jpg" url="https://www.techfak.uni-bielefeld.de/~skopp/" %}
+{% include people_horizontal.html name="Michael Neff" affiliation="University of California, Davis, USA" img="https://www.cs.ucdavis.edu/~neff/images/MichaelNeff_small.jpg" url="https://www.cs.ucdavis.edu/~neff/" %}
 
 <h2 style="color: #3979c0">Contact</h2>
 If you have any questions, please feel free to contact us at <a href= "mailto: genea-contact@googlegroups.com">genea-contact@googlegroups.com</a>.
