@@ -104,3 +104,5 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
   {% include people_horizontal.html name="Gustav Henter" affiliation="KTH Royal Institute of Technology, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
 </div>
 
+<h2 style="color: #3979c0">Contact</h2>
+If you have any questions, please feel free to contact us at <a href= "mailto: genea-contact@googlegroups.com">genea-contact@googlegroups.com</a>.
