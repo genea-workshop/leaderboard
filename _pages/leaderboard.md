@@ -12,7 +12,7 @@ related_posts: false
 </div>
 
 <p style="font-size:1.2em;">
-<b>Summary:</b> To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard based on large-scale human evaluation. This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a> and recent leaderboards in NLP and computer vision, such as <a href="https://chat.lmsys.org/?leaderboard" rel="external nofollow noopener" target="_blank">Chatbot Arena</a> and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofollow noopener" target="_blank">HEIM</a>.
+<b>TL;DR:</b> To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard based on large-scale human evaluation. This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a> and recent leaderboards in NLP and computer vision, such as <a href="https://chat.lmsys.org/?leaderboard" rel="external nofollow noopener" target="_blank">Chatbot Arena</a> and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofollow noopener" target="_blank">HEIM</a>.
 </p>
 <br>
 
@@ -110,9 +110,9 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 </div>
 
 <h2 style="color: #3979c0">Scientific advisors</h2>
-{% include people_horizontal.html name="Rachel McDonnell" affiliation="Trinity College Dublin, Ireland" url="https://www.scss.tcd.ie/Rachel.McDonnell/" img="https://www.scss.tcd.ie/Rachel.McDonnell/images/Rachel01_SquareSmallc.jpg" %}
-{% include people_horizontal.html name="Stefan Kopp" affiliation="Bielefeld University, Germany" img="http://www.techfak.uni-bielefeld.de/~skopp/portrait-neu-klein.jpg" url="https://www.techfak.uni-bielefeld.de/~skopp/" %}
-{% include people_horizontal.html name="Michael Neff" affiliation="University of California, Davis, USA" img="https://www.cs.ucdavis.edu/~neff/images/MichaelNeff_small.jpg" url="https://www.cs.ucdavis.edu/~neff/" %}
+{% include people_horizontal.html name="Rachel McDonnell" affiliation="Trinity College Dublin, Ireland" url="https://www.scss.tcd.ie/Rachel.McDonnell/" img="assets/img/people/rachel.jpg" %}
+{% include people_horizontal.html name="Stefan Kopp" affiliation="Bielefeld University, Germany" img="assets/img/people/stefan.jpeg" url="https://www.techfak.uni-bielefeld.de/~skopp/" %}
+{% include people_horizontal.html name="Michael Neff" affiliation="University of California, Davis, USA" img="assets/img/people/michael.jpg" %}
 
 <h2 style="color: #3979c0">Contact</h2>
 If you have any questions, please feel free to contact us at <a href= "mailto: genea-contact@googlegroups.com">genea-contact@googlegroups.com</a>.
