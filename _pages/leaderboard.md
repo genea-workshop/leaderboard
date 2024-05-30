@@ -20,7 +20,7 @@ related_posts: false
 * Establish a **living benchmark** of gesture-generation models using **human evaluation**
 * Ensure **high reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
 * Develop **better objective metrics** based on the collected human ratings
-* **Unify gesture-generation** researchers from computer vision, computer graphics, machine learning, NLP, and HCI
+* **Unify gesture-generation researchers** from computer vision, computer graphics, machine learning, NLP, and HCI
 * Evolve with the community
 
 <br>
@@ -28,7 +28,7 @@ related_posts: false
 <h2 style="color: #3979c0">Leaderboard setup and timeline</h2>
 The leaderboard will be released in two stages.
 
-To construct the leaderboard, we are inviting authors of up to 15 already published gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
+To construct the leaderboard, we are inviting authors of a selection of already published gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
 
 Afterwards, the leaderboard will become open to new submissions, and will be continuously updated by the GENEA team. Our current plan is to release the leaderboard **by the end of the year**.
 
@@ -64,7 +64,7 @@ We will recruit a large number of evaluators on a crowd-sourcing platform to con
 3. Emotional expression
 
 
-For **motion naturalness** and **emotional expression**, we will use an ELO-based ranking system based on pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
+For **motion naturalness** and **emotional expression**, we will use an ELO-style ranking system based on pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
 
 To accurately quantify **motion appropriateness**, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646).
 
@@ -100,20 +100,24 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 <br>
 
 <h2 style="color: #3979c0">Organisers</h2>
+
+The evaluations will be managed by the GENEA team:
+
 <div class="row row-cols-2 projects pt-3 pb-3">
   {% include people_horizontal.html name="Rajmund Nagy" affiliation="KTH Royal Institute of Technology, Sweden" url="https://nagyrajmund.github.io/" img="/assets/img/people/rajmund.png" %}
   {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
   {% include people_horizontal.html name="Teodor Nikolov" affiliation="motorica.ai, Sweden" url="https://www.linkedin.com/in/teodor-nikolov/" img="/assets/img/people/teodor.jfif" %}
   {% include people_horizontal.html name="Taras Kucherenko" affiliation="Electronic Arts - SEED, Sweden" url="https://svito-zar.github.io/" img="assets/img/people/taras.jpg" %}
   {% include people_horizontal.html name="Youngwoo Yoon" affiliation="ETRI, South Korea" img="assets/img/people/youngwoo.jpg" url="https://sites.google.com/view/youngwoo-yoon/" %}
-  {% include people_horizontal.html name="Gustav Henter" affiliation="KTH Royal Institute of Technology, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
+  {% include people_horizontal.html name="Gustav Eje Henter" affiliation="KTH Royal Institute of Technology and motorica.ai, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
 </div>
 <br>
 <h2 style="color: #3979c0">Scientific advisors</h2>
+
 <div class="row row-cols-2 projects pt-3 pb-3">
 {% include people_horizontal.html name="Rachel McDonnell" affiliation="Trinity College Dublin, Ireland" url="https://www.scss.tcd.ie/Rachel.McDonnell/" img="assets/img/people/rachel.jpg" %}
 {% include people_horizontal.html name="Stefan Kopp" affiliation="Bielefeld University, Germany" img="assets/img/people/stefan.jpeg" url="https://www.techfak.uni-bielefeld.de/~skopp/" %}
-{% include people_horizontal.html name="Michael Neff" affiliation="University of California, Davis, USA" img="assets/img/people/michael.jpg" %}
+{% include people_horizontal.html name="Michael Neff" affiliation="University of California, Davis, USA" img="assets/img/people/michael.jpg" url="https://www.cs.ucdavis.edu/~neff/"%}
 </div>
 <br>
 
