@@ -55,9 +55,19 @@ To participate in the evaluation, you will need to:
 2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
 3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
 
+<<<<<<< HEAD
+## Evaluation methodology
+<!-- 
+<figure style="text-align: center; margin-bottom: 2em;">
+<img src="https://genea-workshop.github.io/2023/challenge/visualiser.gif" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
+<figcaption><i>Example stimulus used in the GENEA Challenge 2023 dyadic speech appropriateness evaluation.</i></figcaption>
+</figure> -->
+
+=======
 <br>
 
 <h2 style="color: #3979c0">Evaluation methodology</h2>
+>>>>>>> d091adbfaf6bb9d319eade4dff04ebf7c60aa437
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
 1. Motion naturalness
 2. Motion appropriateness for the speech
@@ -122,4 +132,4 @@ The evaluations will be managed by the GENEA team:
 <br>
 
 <h2 style="color: #3979c0">Contact</h2>
-If you have any questions, please feel free to contact us at <a href= "mailto: genea-contact@googlegroups.com">genea-contact@googlegroups.com</a>.
+If you have any questions, please feel free to contact us at <a href= "mailto: genea-leaderboard@googlegroups.com">genea-leaderboard@googlegroups.com</a>.
