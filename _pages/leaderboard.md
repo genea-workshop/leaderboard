@@ -11,7 +11,7 @@ related_posts: false
 <img src="./assets/img/genea-logo.png" alt="The GENEA Leaderboard logo" width="100%"/>
 </div>
 
-<p style="font-size:1.1em;font-weight: 500;">
+<p style="font-size:1.2em;">
 <b>Summary:</b> To improve benchmarking of speech-driven gesture generation, we are developing the online GENEA Leaderboard based on large-scale human evaluation. This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a> and recent leaderboards in NLP and computer vision, such as <a href="https://chat.lmsys.org/?leaderboard" rel="external nofollow noopener" target="_blank">Chatbot Arena</a> and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofollow noopener" target="_blank">HEIM</a>.
 </p>
 <br>
@@ -25,12 +25,12 @@ related_posts: false
 
 <br>
 
-<h2 style="color: #3979c0">Leaderboard setup</h2>
-Gesture-generation models are currently scattered across different datasets, and it is often difficult to successfully retrain someone else’s model on new data. 
+<h2 style="color: #3979c0">Leaderboard setup and timeline</h2>
+The leaderboard will be released in two stages.
 
-To populate the leaderboard, we are currently inviting authors of up to 15 recent gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation.
+To construct the leaderboard, we are inviting authors of up to 15 already published gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
 
-After this initial evaluation is completed, the leaderboard will become open to public submissions, and will be continuously updated by the GENEA team.
+Afterwards, the leaderboard will become open to new submissions, and will be continuously updated by the GENEA team. Our current plan is to release the leaderboard **by the end of the year**.
 
 <h3 style="color: #3979c0">Dataset</h3>
 The leaderboard is going to use the English recordings of the [BEAT-v2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
@@ -80,10 +80,6 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 
 <br>
 
-<h2 style="color: #3979c0">Timeline</h2>
-Our current plan is to gather submissions for the first evaluation until the **end of October**, and to launch the leaderboard by the end of the year.
-
-<br>
 
 <h2 style="color: #3979c0">Frequently Asked Questions</h2>
 * Why do we need a leaderboard?
