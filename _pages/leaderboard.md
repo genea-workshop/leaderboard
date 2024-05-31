@@ -8,7 +8,7 @@ related_posts: false
 ---
 
 <div style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/genea-logo.png" alt="The GENEA Leaderboard logo" width="100%"/>
+<img src="./assets/img/genea-logo_16.png" alt="The GENEA Leaderboard logo" width="100%"/>
 </div>
 
 <p style="font-size:1.2em;">
