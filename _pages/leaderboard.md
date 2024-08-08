@@ -105,10 +105,12 @@ The evaluations will be managed by the GENEA team:
 
 <div class="row row-cols-2 projects pt-3 pb-3">
   {% include people_horizontal.html name="Rajmund Nagy" affiliation="KTH Royal Institute of Technology, Sweden" url="https://nagyrajmund.github.io/" img="/assets/img/people/rajmund.png" %}
-  {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
-  {% include people_horizontal.html name="Teodor Nikolov" affiliation="motorica.ai, Sweden" url="https://www.linkedin.com/in/teodor-nikolov/" img="/assets/img/people/teodor.jfif" %}
-  {% include people_horizontal.html name="Taras Kucherenko" affiliation="Electronic Arts - SEED, Sweden" url="https://svito-zar.github.io/" img="assets/img/people/taras.jpg" %}
   {% include people_horizontal.html name="Youngwoo Yoon" affiliation="ETRI, South Korea" img="assets/img/people/youngwoo.jpg" url="https://sites.google.com/view/youngwoo-yoon/" %}
+  {% include people_horizontal.html name="Hendric Voß" affiliation="Bielefeld University, Germany" url="https://techfak.uni-bielefeld.de/~hvoss/" img="/assets/img/people/hendric.jpg" %}
+  {% include people_horizontal.html name="Teodor Nikolov" affiliation="motorica.ai, Sweden" url="https://www.linkedin.com/in/teodor-nikolov/" img="/assets/img/people/teodor.png" %}
+  {% include people_horizontal.html name="Mihail Tsakov" affiliation="PixelPool, Netherlands" url="https://www.linkedin.com/in/mihailtsakov/" img="/assets/img/people/mihail.png" %}
+  {% include people_horizontal.html name="Thanh Hoang-Minh" affiliation="VNUHCM - University of Science, Vietnam" url="https://www.linkedin.com/in/hmthanh/" img="assets/img/people/thanh.png" %}
+  {% include people_horizontal.html name="Taras Kucherenko" affiliation="Electronic Arts - SEED, Sweden" url="https://svito-zar.github.io/" img="assets/img/people/taras.jpg" %}
   {% include people_horizontal.html name="Gustav Eje Henter" affiliation="KTH Royal Institute of Technology and motorica.ai, Sweden" img="assets/img/people/gustav.jpeg" url="https://people.kth.se/~ghe/" %}
 </div>
 <br>
