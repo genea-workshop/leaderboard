@@ -16,6 +16,9 @@ related_posts: false
 </p>
 <br>
 
+<h2 style="color: #3979c0">Update</h2>
+We have released a new position paper about the problems of gesture-generation evaluation, and the details of the GENEA leaderboard initiative! It is currently available [on this link](https://drive.google.com/file/d/171eMLx6VbdpHRoa438EW1s7l8yt3RqtD/view). 
+
 <h2 style="color: #3979c0">Our goals</h2>
 * Establish a **living benchmark** of gesture-generation models using **human evaluation**
 * Ensure **high reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more
@@ -49,14 +52,6 @@ Being a living leaderboard, the dataset used for benchmarking is expected to evo
 
 <br>
 
-<h2 style="color: #3979c0">How to participate</h2>
-To participate in the evaluation, you will need to:
-1. Train your model on the [BEAT-v2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
-2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
-3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
-
-<br>
-
 <h2 style="color: #3979c0">Evaluation methodology</h2>
 We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
 1. Motion naturalness
@@ -80,6 +75,15 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 
 <br>
 
+<h2 style="color: #3979c0">How to participate</h2>
+To participate in the evaluation, you will need to:
+1. Train your model on the [BEAT-v2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
+2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
+3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
+
+We are currently reaching out to potential participants for the first evaluation. We will share more details in the upcoming months. 
+
+<br>
 
 <h2 style="color: #3979c0">Frequently Asked Questions</h2>
 <details>
