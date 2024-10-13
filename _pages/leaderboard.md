@@ -16,8 +16,12 @@ related_posts: false
 </p>
 <br>
 
-<h2 style="color: #3979c0">Update</h2>
-We have released a new position paper about the problems of gesture-generation evaluation, and the details of the GENEA leaderboard initiative! It is currently available [on this link](https://drive.google.com/file/d/171eMLx6VbdpHRoa438EW1s7l8yt3RqtD/view). 
+<h2 style="color: #3979c0">New position paper</h2>
+
+We have released a new position paper about the problems of gesture-generation evaluation, and the details of the GENEA leaderboard initiative! [Click here](https://arxiv.org/abs/2410.06327) or on the image below to view the arxiv preprint.
+
+[![preview image of position paper](assets/img/arxiv_preview.png)](https://arxiv.org/abs/2410.06327)
+
 
 <h2 style="color: #3979c0">Our goals</h2>
 * Establish a **living benchmark** of gesture-generation models using **human evaluation**
