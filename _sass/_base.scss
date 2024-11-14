@@ -1001,6 +1001,24 @@ progress::-moz-progress-bar {
   }
 }
 
+
+/* Container using Flexbox */
+.GENEAcontainer {
+    display: flex;             /* Enables Flexbox */
+    justify-content: space-between; /* Evenly spaces the boxes */
+}
+
+/* Individual Box Styling */
+.GENEAbox {
+    flex: 1;                 /* Makes each box take equal space */
+    padding: 20px;           /* Adds padding inside each box */
+    margin: 10px;            /* Adds space between the boxes */
+    background-color: lightgray; /* Background color */
+    text-align: left;      /* Centers the text inside the box */
+    border: 1px solid #ccc; /* Adds a border around the box */
+}
+
+
 /* Table of Contents */
 nav[data-toggle="toc"] {
   top: 5rem;
