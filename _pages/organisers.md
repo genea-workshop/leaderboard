@@ -98,7 +98,7 @@ Our cumulative experience covers **all major aspects of gesture-generation resea
 
 
 <h3 style="color: #3979c0">Scientific advisors</h3>
-Three leading experts of <i>nonverbal communication, visual perception, human-agent interaction, and motion capture</i> are also heavily involved in key strategic decisions, as well as the <b>design of the evaluation methodology</b>:
+While the organising team handles day-to-day operations, we are fortunate to be advised in key strategic decisions and the leaderboard methodologyby three leading experts of <i>nonverbal communication, visual perception, human-agent interaction, and motion capture</i>.
   
 <div class="row">
 
