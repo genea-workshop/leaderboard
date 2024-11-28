@@ -4,6 +4,10 @@
 
 // Typography
 
+p, div {
+text-align: justify;
+}
+
 p,
 h1,
 h2,
@@ -138,6 +142,9 @@ ul.task-list input[type="checkbox"] {
   vertical-align: middle;
 }
 
+#container mt-5 {
+  text-align: justify;
+}
 // Math
 
 .equation {
@@ -1013,9 +1020,9 @@ progress::-moz-progress-bar {
     flex: 1;                 /* Makes each box take equal space */
     padding: 20px;           /* Adds padding inside each box */
     margin: 10px;            /* Adds space between the boxes */
-    background-color: lightgray; /* Background color */
+    background-color: #c7dffa; /* Background color */
     text-align: left;      /* Centers the text inside the box */
-    border: 1px solid #ccc; /* Adds a border around the box */
+    border: 1px solid #000000; /* Adds a border around the box */
 }
 
 

@@ -11,37 +11,11 @@ description: An overview of the leaderboard initiative
 </div>
 <h1 align=center>&#9993; Contact address: <a href= "mailto: genea-leaderboard@googlegroups.com">genea-leaderboard@googlegroups.com</a> &#9993;</h1> .
 
-<blockquote>THIS WEBSITE IS UNDER CONSTRUCTION!</blockquote>
-
 <blockquote align=center style="font-size:1.5em;text-align: justify;"><b>Summary:</b> To improve benchmarking of <b>speech-driven gesture generation</b>, we are developing the online GENEA Leaderboard based on <b>large-scale human evaluation</b>.
 This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a>
 and recent leaderboards in NLP and computer vision, such as <a href="https://chat.lmsys.org/?leaderboard" rel="external nofollow noopener" target="_blank">Chatbot Arena</a>
 and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofollow noopener" target="_blank">HEIM</a>.
 </blockquote>
-
-
-
-<div class="GENEAcontainer">
-    <div class="GENEAbox">
-        <h1 align=center style="color: #3979c0">Our goals</h1>
-        <ul>
-            <li>Establish a continuously updated **definitive ranking** of state-of-the-art models **on the most common** speech-gesture **motion capture datasets**, based on human evaluation.</li>
-            <li> Raise the standards for **reproducibility** by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more. </li>
-            <li> Use the collected human ratings to develop **better objective metrics** that are aligned with human perception of motion; </li>
-            <li> **Unify gesture-generation researchers** from computer vision, computer graphics, machine learning, NLP, HCI, and robotics. </li>
-            <li> **Evolve with the community** as new datasets, evaluations, and methodologies become available. </li>
-        </ul>         
-    </div>
-    <div class="GENEAbox">
-        <h1 align=center style="color: #3979c0">Outcomes</h1>
-        <h5>Once the Leaderboard is operational, you will be able to:</h5>
-
-        <li> **Submit** your gesture-generation model's outputs, and **receive human evaluation results in 2-4 weeks for free**, managed by our expert team; </li> 
-        <li> **Compare** to any state-of-the-art method on the Leaderboard using our comprehensive collection of rendered video outputs, **without having to reproduce baselines**; </li>  
-        <li> **Visualise** your generated motion and **conduct our user studies** on your own **using our easy-to-use open-source tools**; </li>   
-        <li> ...and much more! </li>   
-    </div>
-</div>
 
 <h1 align=center style="color: #3979c0">Leaderboard setup and timeline</h1>
 **(For comprehensive details regarding our current evaluation, please visit our [Details](/leaderboard//details) page.)**

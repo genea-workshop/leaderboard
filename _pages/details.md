@@ -10,63 +10,93 @@ nav_order: 1
 toc: 
   sidebar: left
 ---
-# About the Leaderboard
-The Gesture Generation Leaderboard is a living benchmark for gesture generation models. It allows researchers to test and showcase their models' performance on a standardized dataset and evaluation methodology. Initially, the leaderboard will feature results from existing models that have been adapted to the BEAT-v2 dataset. Following this initial phase, we’ll open the leaderboard to all researchers interested in submitting and evaluating new models.
+<h1 style="color: #3979c0"> About the Leaderboard</h1>
+The GENEA Gesture Generation Leaderboard is an upcoming living benchmark for gesture generation models. It allows researchers to test and showcase their models' performance on a standardised dataset and evaluation methodology.
+
+Initially, the leaderboard will feature results from existing models that have been adapted to the BEAT-2 dataset. Following this initial phase, we’ll open the leaderboard to all researchers interested in submitting and evaluating new models. 
 
 
-<h1 style="color: #3979c0">Leaderboard setup and timeline</h1>
-The leaderboard will be released in two stages.
 
-To construct the leaderboard, we are inviting authors of a selection of already published gesture-generation models to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
+<h2>Our goals</h2>
+<ul>
+    <li>Establish a continuously updated <b>definitive ranking</b> of state-of-the-art models <b>on the most common</b> speech-gesture <b>motion capture datasets</b>, based on human evaluation.</li>
+    <li> Raise the standards for <b>reproducibility</b> by releasing all collected model outputs, human ratings, and scripts for motion visualisation, conducting user-studies, and more. </li>
+    <li> Use the collected human ratings to develop <b>better objective metrics</b> that are aligned with human perception of motion; </li>
+    <li> <b>Unify gesture-generation researchers</b> from computer vision, computer graphics, machine learning, NLP, HCI, and robotics. </li>
+    <li> <b>Evolve with the community</b> as new datasets, evaluations, and methodologies become available. </li>
+</ul>         
+<h2>Outcomes</h2>
+Once the Leaderboard is operational, you will be able to:
+<ul>
+  <li> <b>Submit</b> your gesture-generation model's outputs, and <b>receive human evaluation results in 2-4 weeks for free</b>, managed by our expert team; </li> 
+  <li> <b>Compare</b> to any state-of-the-art method on the Leaderboard using our comprehensive collection of rendered video outputs, <b>without having to reproduce baselines</b>; </li>  
+  <li> <b>Visualise</b> your generated motion and <b>conduct our user studies</b> on your own <b>using our easy-to-use open-source tools</b>; </li>   
+  <li> ...and much more! </li>   
+</ul>
 
-Afterwards, the leaderboard will become open to new submissions, and will be continuously updated by the GENEA team. Our current plan is to release the leaderboard **by the end of the year**.
 
 
-# Dataset: BEAT-v2 (SMPL-X Format)
-<h3 style="color: #3979c0">Dataset</h3>
-The leaderboard is going to use the English recordings of the [BEAT-v2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
-1. It’s the largest public mocap dataset of gesturing (with 60 hours of data)
-2. It has a high variety of speakers and emotions
-3. It includes semantic gesture annotations
-4. The SMPL-X format is compatible with many other datasets
-5. It also includes facial expressions (a possible future addition for the leaderboard)
+<h1 style="color: #3979c0">Setup and development timeline</h1>
+To construct the leaderboard, we are inviting authors of gesture-generation models published in recent years to participate in a large-scale evaluation. The organisers will conduct a comprehensive evaluation of the submitted systems, based on online crowd-sourcing, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
+
+Afterwards, the leaderboard will become open to new submissions, and will be continuously updated by the GENEA team. Our current plan is to release the leaderboard alongside our first state-of-the-art report, co-authored with submitting teams, in **March 2025**.
+
+<h1 style="color: #3979c0">Dataset</h1>
+<h3>BEAT-2 in the SMPL-X Format</h3>
+The leaderboard will evaluate models based on the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/) in the SMPL-X format, initially without facial expressions. We think this data is the best candidate for an initial benchmark dataset for several reasons:
+1. It’s the largest public mocap dataset of gesturing (with 60 hours of data in total)
+2. BEAT, its predecessor, has been one of the most commonly used datasets in recent years for gesture-generation research
+3. It has a high variety of speakers and emotions, and it includes semantic gesture annotations
+4. The SMPL-X format is compatible with many other mocap datasets, the majority of pose estimation models, and includes potential extensions (e.g., facial expressions for future iterations).
 
 <figure style="text-align: center; margin-bottom: 2em;">
 <img src="https://pantomatrix.github.io/EMAGE/assets/video_t.gif" alt="Official BEAT dataset gif that shows several animated speaking avatars." width="90%"/>
-<figcaption><i>Speaking BEAT dataset avatars.</i></figcaption>
+<figcaption><i>Speaking characters from BEAT-2 visualised with the SMPL-X body model.</i></figcaption>
 </figure>
 
-Being a living leaderboard, the dataset used for benchmarking is expected to evolve in the future as newer datasets become available.
+Being a living leaderboard, the dataset used for benchmarking is expected to change in the future as better mocap datasets become available.
 
 <br>
+<h1 style="color: #3979c0">Submission process</h1>
+<h2>How to participate</h2>
+1. <b>Pre-screening</b>:
+Send an e-mail to our <a href= "mailto: genea-leaderboard@googlegroups.com">contact address</a>, indicating which of your published models you intend to participate with in the evaluation. We will get back to you within a few days, confirming whether we can commit to evaluating your future submission. 
 
-All models on the leaderboard will be evaluated on the BEAT-v2 dataset, specifically its English-language recordings in the SMPL-X format (without facial expressions). This dataset was chosen because:
-* It contains 60 hours of gesturing data, offering extensive diversity across speakers, emotions, and gestures.
-Semantic gesture annotations make it a versatile choice for initial benchmarking.
-* The SMPL-X format supports compatibility with various other mocap datasets and includes potential extensions (e.g., facial expressions for future iterations).
-* The leaderboard dataset may evolve over time, incorporating newer datasets as they become available.
+2. <b>Prepare your model</b>: 
+Train your model on the official training split of the BEAT-2 dataset and/or any other publicly available mocap data. Given an arbitrarily long speech recording, your model must be able to generate an equally long motion sequence. Speaker ID, emotion labels, and the body shape vector will always be available as inputs, but you are not required to use them.
 
-We welcome researchers with novel gesture-generation models trained on the BEAT-v2 dataset to join the leaderboard. 
-
-Here are the steps to get started:
-1. Prepare Your Model for the BEAT-v2 Dataset
-Train your model using the BEAT-v2 dataset, ensuring you hold out the official test set.
-Generate gesture motion predictions for each entry in the leaderboard's test set (a superset of the BEAT-v2 test set, which will be provided).
-
-2. Format Your Submission
+3. <b>Generate your synthetic motion</b>:
+For each speech recording in the BEAT-2 English test set, generate corresponding synthetic movements in the SMPL-X format. If your model is probabilistic (i.e., nondeterministic), please generate 5 samples for each input file.
+<!-- 
 Use the SMPL-X format for your motion data. Each output file should align with the naming of the input audio files (e.g., input_sample_name.npy).
-Submit individual NPY files for each test input. Do not submit a zip file; each NPY file should be uploaded individually.
+Submit individual NPY files for each test input. Do not submit a zip file; each NPY file should be uploaded individually. -->
 
-3. Submit Your Motion Data and Report
+4. <b>Submit your motion data and write a technical report:</b>
+Send your motion data to us, either through e-mail or on the submission page we will prepare for you. In order for your submission to be included on the leaderboard, you have to commit to writing a technical report about your submission, including but not limited to details about data, model architecture, training methods and generation process.
+
+<h2>What happens after your submission</h2>
+
+1. <b>Submission screening</b>: Our team will inspect your submitted motion in order to validate whether your results are suitable for the leaderboard. We will get back to you within a week, and we will only reject submission in exceptional cases (e.g., if the movements are extremely jerky or still).  
+  
+2. <b>Clip segmentation</b>: We will split your submitted motion sequences into short evaluation clips (roughly 10-15 seconds each). We will take care that the evaluation clips are aligned with full speaking turns. The timestamps of the evaluation clips will be kept private in order to prevent cherry-picking.
+
+3. <b>Video rendering</b>: Our research engineers will create high-quality close-up video renders of the evaluation clips, using a standardised 3D scene and a textured SMPL-X character model. 
+
+4. <b>Crowd-sourced evaluations</b>: Once we have received enough submissions, we will conduct rigorous large-scale user studies, as detailed below on this page, and perform statistical analysis on the results. 
+
+5. <b>Release of data and evaluation results</b>: We will update the leaderboard based on the statistical results, and publish all of your rendered videos alongside your technical report. 
+ 
+6. <b>State-of-the-art report</b>: Periodically, we will invite participating teams to co-author a detailed state-of-the-art report, based on a snapshot of the leaderboard, in the style of the GENEA Challenge papers.
+<!-- 
 Navigate to the Submission page
 Log in via GitHub to access the submission portal.
 Upload your generated NPY files in the designated submission section. Make sure your filenames match the input file names.
-Provide a link to your paper or include a brief technical report that describes your model. If you are submitting an already published model, document any adjustments made specifically for the BEAT-v2 dataset.
+Provide a link to your paper or include a brief technical report that describes your model. If you are submitting an already published model, document any adjustments made specifically for the BEAT-2 dataset. -->
 
-
-# User-study methodology:
 <h1 style="color: #3979c0">Evaluation methodology</h1>
-We will recruit a large number of evaluators on a crowd-sourcing platform to conduct best-practises human evaluation on three aspects:
+The leaderboard rankings will be based on online, perceptual user studies conducted on the Prolific crowd-sourcing platform by our team. 
+
+We will recruit a large number of evaluators to conduct best-practices human evaluation on three aspects:
 1. Motion naturalness
 2. Motion appropriateness for the speech
 3. Emotional expression
@@ -79,7 +109,7 @@ To accurately quantify **motion appropriateness**, we will use a mismatching pro
 
 <figure style="text-align: center; margin-bottom: 2em;">
 <img src="./assets/img/user_study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
-<figcaption><i>A possible evaluation interface for the user studies.</i></figcaption>
+<figcaption><i>A sketch of the evaluation interface for the user studies.</i></figcaption>
 </figure>
 
 To standardise human evaluation, our tooling for running experiments will be released alongside the necessary visualisation scripts and 3D models.
@@ -94,13 +124,10 @@ These two studies together will give us insights into both the natural quality o
 
 Below you can find an overview of all submitted responses from the evaluation study:
 
-
-# Submission:
-
-<h1 style="color: #3979c0">How to participate</h1>
+<h1 style="color: #3979c0">Submission process</h1>
 To participate in the evaluation, you will need to:
-1. Train your model on the [BEAT-v2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
-2. Generate motion for the leaderboard’s test set (a superset of the BEAT-v2 test set; will be provided at a later time).
+1. Train your model on the [BEAT-2](https://pantomatrix.github.io/EMAGE/) dataset, with the official test set held out. 
+2. Generate motion for the leaderboard’s test set (a superset of the BEAT-2 test set; will be provided at a later time).
 3. Submit the generated motion to the leaderboard organisers, alongside your paper or brief technical report describing the details of your model. If submitting an already published model, you only need to document the adaptations you made for the new dataset.
 
 We are currently reaching out to potential participants for the first evaluation. We will share more details in the upcoming months. 
@@ -110,14 +137,14 @@ Welcome to the submission page for the Gesture Generation Leaderboard! Here, we�
 
 ## Submission Requirements:
 1. Generate Gesture Motion Data
-We have provided input speech audio files from the BEAT-v2 test set.
+We have provided input speech audio files from the BEAT-2 test set.
 Your task is to generate corresponding gesture motion data for each input.
 The output motion data should be in SMPL-X format with the following specifications:
 File Format: .npy (NumPy array format)
 Naming Convention: Each output file should exactly match the name of its corresponding input audio file, for example:
 Input: sample_001_audio.wav
 Output: sample_001_motion.npy
-Note: The test set provided by the leaderboard includes a superset of the original BEAT-v2 test data. Please generate gesture outputs for all files in the provided test set.
+Note: The test set provided by the leaderboard includes a superset of the original BEAT-2 test data. Please generate gesture outputs for all files in the provided test set.
 
 2. Format and Structure
 Upload individual NPY files for each test input.
@@ -128,13 +155,13 @@ Ensure that each output file contains the gesture data generated by your model i
 * Login: Use your GitHub account to log in to the submission portal. This login will enable us to track and organize submissions more effectively.
 * Upload Section: In the upload section below, select your NPY files for each test input. Make sure you verify file names before uploading to avoid mismatches with the input audio files.
 * Confirmation: After uploading, double-check that all files have been correctly named and uploaded. Misnamed files may lead to errors during evaluation or result in incomplete assessments.
-* Documentation: Provide a brief description of your model or a link to a published paper or preprint describing your approach. If you are adapting an already published model for the BEAT-v2 dataset, include a note on any modifications made.
+* Documentation: Provide a brief description of your model or a link to a published paper or preprint describing your approach. If you are adapting an already published model for the BEAT-2 dataset, include a note on any modifications made.
 
 ## After Submission
 Once your files are submitted:
 * Evaluation Queue: Your submission will enter our evaluation queue. Evaluations will be processed as quickly as possible, and results will be posted to the leaderboard when ready.
 * Results: Upon completion, your model's performance metrics will be listed on the leaderboard, alongside human evaluation scores and objective metrics
-* Resubmissions: You are welcome to submit updated versions of your model over time. Please ensure each new submission is uniquely identified in your documentation (e.g., Model v2).
+* Resubmissions: You are welcome to submit updated versions of your model over time. Please ensure each new submission is uniquely identified in your documentation (e.g., Model 2).
 
 <h1 style="color: #3979c0">Frequently Asked Questions</h1>
 <details>
