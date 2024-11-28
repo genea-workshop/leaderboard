@@ -94,27 +94,68 @@ Upload your generated NPY files in the designated submission section. Make sure 
 Provide a link to your paper or include a brief technical report that describes your model. If you are submitting an already published model, document any adjustments made specifically for the BEAT-2 dataset. -->
 
 <h1 style="color: #3979c0">Evaluation methodology</h1>
-The leaderboard rankings will be based on online, perceptual user studies conducted on the Prolific crowd-sourcing platform by our team. 
+We will recruit large numbers of evaluators to conduct best-practices human evaluation. Our perceptual user studies will be designed to carefully disentangle key aspects of gesture evaluation, following what we learned from organising the 2020–2023 GENEA challenges.
 
-We will recruit a large number of evaluators to conduct best-practices human evaluation on three aspects:
-1. Motion naturalness
-2. Motion appropriateness for the speech
-3. Emotional expression
+<h2 style="color: #3979c0">Evaluation tasks</h2>
+<h3>Motion quality</h3>
+The first evaluation task will measure motion quality, in other words, to what degree do the evaluators perceive the overall movements as the motion of a real human, without considering the speech. For this evaluation, the stimuli will be silent videos, and we will perform pairwise comparisons of motions from different sources (e.g., gesture-generation systems, baselines, or mocap data). 
 
+The statistical analysis will be based on an ELO-style (Bradley-Terry) ranking system, similar to the methodology of <a href="https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model">Chatbot Arena</a>. We believe that this will prove to be a highly scalable and efficient method, with interpretable results, that allows us to conduct recurring evaluations for each future submission separately.
 
-For **motion naturalness** and **emotional expression**, we will use an ELO-style ranking system based on pairwise comparisons (Bradley-Terry), similar to [Chatbot Arena](https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model).
+<figure style="text-align: center; margin-bottom: 2em;">
+<img src="./assets/img/user_study_interface.png" width="50%"/>
+<figcaption><i>A sketch of the evaluation interface for the user studies.</i></figcaption>
+</figure>
 
-To accurately quantify **motion appropriateness**, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646).
+<h3>Motion specificity to speech</h3>
+The second evaluation task will measure whether the outputs of the gesture-generation system are <i>somehow related</i> to the speech input. As shown in the GENEA 2020 challenge report, a naive evaluation question  
+
+Therefore, we will use a mismatching procedure based on the [GENEA Challenges](https://arxiv.org/abs/2308.12646). In a nutshell, our approach will be to test whether evaluators can identify which of two speech clips was used to generate the motion. This is also a pairwise comparison, but unlike the motion quality assessment, it will be performed for each system independently.
+
+<h3>Future evaluations</h3>
+After the leaderboard becomes established, we will include new evaluation tasks based on what datasets become available, and what challenges become more important in the field. Some possibilities are to evaluate facial expressions, emotion expressivity, motion specificity to the meaning of the speech, and so on. (See our <a href="/leaderboard/position_paper">position paper for more details.)
+
+<h2 style="color: #3979c0">Standardised visualisation</h2>
+Visualisation is one of the most important design choices for perceptual user studies that evaluate motion synthesis. 
+
+Currently, almost every gesture-generation paper uses a different character model and 3D scene configuration. This can greatly influence the evaluation results.
+
+We are developing an open-source automated Unreal Engine pipeline for rendering videos for the user study, which will be shared with the community when the leaderboard gets published. 
 
 
 <figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/user_study_interface.png" alt="Gif of the genea challenge 2023 visualizer." width="80%"/>
-<figcaption><i>A sketch of the evaluation interface for the user studies.</i></figcaption>
+<img src="./assets/img/render_snapshot.png" width="50%"/>
+<figcaption><i><b>TODO UPDATE</b> A preview of our renders.</i></figcaption>
 </figure>
+
+We will create a realistic, but minimal 3D scene with lighting, and we will use a textured SMPL-X mesh as a high-quality human character model. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion.
+
 
 To standardise human evaluation, our tooling for running experiments will be released alongside the necessary visualisation scripts and 3D models.
 
 The leaderboard will also feature many commonly used objective metrics (e.g., FGD and beat consistency) as well as model properties such as size, memory usage, etc.
+
+
+<h1 style="color: #3979c0">Frequently Asked Questions</h1>
+<details>
+    <summary>Why do we need a leaderboard?</summary>
+    <ul>
+      <li>Gesture generation research is currently fragmented across different datasets and evaluation protocols.</li>
+      <li>Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature.</li>
+      <li>At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other.</li>
+      <li>This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.</li>
+      <li>The leaderboard is designed to directly counter these issues.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>How are the evaluations funded?</summary>
+    <p>We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.</p>
+</details>
+<br>
+
+
+---
 
 In the first study, participants will rate the human-likeness of the gestures by comparing two videos side by side. For each test, both videos will show gesture motion paired with the same speech segment but generated under different conditions. The videos won’t have any audio, so participants can focus purely on the gestures. They’ll choose which of the two videos has more human-like gestures, letting us directly compare the naturalness of different motion generation methods.
 
@@ -162,21 +203,3 @@ Once your files are submitted:
 * Evaluation Queue: Your submission will enter our evaluation queue. Evaluations will be processed as quickly as possible, and results will be posted to the leaderboard when ready.
 * Results: Upon completion, your model's performance metrics will be listed on the leaderboard, alongside human evaluation scores and objective metrics
 * Resubmissions: You are welcome to submit updated versions of your model over time. Please ensure each new submission is uniquely identified in your documentation (e.g., Model 2).
-
-<h1 style="color: #3979c0">Frequently Asked Questions</h1>
-<details>
-    <summary>Why do we need a leaderboard?</summary>
-    <ul>
-      <li>Gesture generation research is currently fragmented across different datasets and evaluation protocols.</li>
-      <li>Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature.</li>
-      <li>At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other.</li>
-      <li>This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.</li>
-      <li>The leaderboard is designed to directly counter these issues.</li>
-    </ul>
-</details>
-
-<details>
-    <summary>How are the evaluations funded?</summary>
-    <p>We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.</p>
-</details>
-<br>
