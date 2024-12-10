@@ -37,11 +37,11 @@ Once the Leaderboard is operational, you will be able to:
 <h1 style="color: #3979c0">Setup and development timeline</h1>
 To construct the leaderboard, we are inviting authors of gesture-generation models published in recent years to participate in a large-scale evaluation. We will conduct comprehensive evaluation of the submitted systems, primarily based on human evaluation, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
 
-Afterwards, the leaderboard will become open to new submissions, and will be continuously updated by our team. Our current plan is to release the leaderboard alongside our first state-of-the-art report, co-authored with submitting teams, in **March 2025**.
+Afterwards, the leaderboard will become open to the public in **March 2025**, and we will be updating it continuously as we receive new model submissions.
 
 <h1 style="color: #3979c0">Dataset</h1>
 <h3>BEAT-2 in the SMPL-X Format</h3>
-The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will discard facial expressions in order to focus on the hand- and body movements.
+The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will <b>discard facial expressions</b> in order to focus on the hand- and body movements.
 
 We think this data is the best candidate for an initial benchmark dataset for several reasons:
 1. It’s the largest public mocap dataset of gesturing (with 60 hours of data in total).
@@ -61,7 +61,7 @@ Being a living leaderboard, the dataset used for benchmarking is expected to cha
 The main goal of the GENEA Leaderboard is to advance the scientific field of automated gesture generation. To best achieve this, we have a few requirements for participation:
 
 <ol style="display: grid; gap: 10px">
-  <li>We are primarily looking to evaluate established gesture generation systems (e.g., already published models). In practice, this means that you must have already conducted your own small-scale evaluations before submitting.</li>
+  <li>We are primarily looking to evaluate established gesture generation systems (e.g., already published models). In practice, this means that we maintain the right to filter out submissions that do not have prior evaluation results, or are clearly far below the state-of-the-art.</li>
 
   <li>By participating in the leaderboard, you allow us to share your submitted motion clips with the scientific community, alongside with the videos we render from them and the human preference data collected during the evaluation.</li>
 
@@ -79,6 +79,7 @@ Send an e-mail to our <a href= "mailto: genea-leaderboard@googlegroups.com">cont
 <ul>
 <li>which model you intend to submit to the evaluation,</li>
 <li>a link to a document describing said model (e.g., a paper),</li>
+<li>a rough outline of planned changes to the original model (if any),</li>
 <li>a list of team members contributing to your adaptation of the model, and</li>
 <li>the name of a main responsible for the team.</li>
 </ul>
@@ -88,7 +89,7 @@ We will get back to you within a few days, confirming whether we can commit to e
 Train your model on the official training split of the BEAT-2 dataset and/or any other publicly available mocap data, except for the BEAT-2 test set. Given an arbitrarily long speech recording, your model must be able to generate an equally long motion sequence. Speaker ID, emotion labels, and the SMPL-X body shape vector will always be available as inputs, but you are not required to use them.</li>
 
 <li> <b>Generate your synthetic motion</b>:
-For each speech recording in the BEAT-2 English test set, generate corresponding synthetic movements in the SMPL-X format. If your model is probabilistic (i.e., nondeterministic), please generate 5 samples for each input file.</li>
+For each speech recording in the BEAT-2 English test set, generate corresponding synthetic movements in the SMPL-X format. If your model is probabilistic (i.e., nondeterministic), please generate 5 samples for each input file, so that we can measure diversity.</li>
 
 <li>  <b>Submit your motion data and write a technical report:</b>
 Send your motion data to us, either through e-mail or on the submission page we will prepare for you. In order for your submission to be included on the leaderboard, you have to commit to writing a technical report about your submission, including but not limited to details about data, model architecture, training methods and generation process.</li>
@@ -118,13 +119,15 @@ Upload your generated NPY files in the designated submission section. Make sure 
 Provide a link to your paper or include a brief technical report that describes your model. If you are submitting an already published model, document any adjustments made specifically for the BEAT-2 dataset. -->
 
 <h1 style="color: #3979c0">Evaluation methodology</h1>
-We will recruit large numbers of evaluators to conduct best-practices human evaluation. Our perceptual user studies will be designed to carefully disentangle key aspects of gesture evaluation, following what we learned from organising the <a href="https://svito-zar.github.io/GENEAchallenge2023/">2020–2023 GENEA challenges</a>.
+We will recruit large numbers of evaluators to conduct best-practices human evaluation. Our perceptual user studies will be designed to carefully disentangle key aspects of gesture evaluation, following what we learned from organising the <a href="https://linktr.ee/genea_workshop">2020–2023 GENEA challenges</a>.
 
 <h2 style="color: #3979c0">Evaluation tasks</h2>
 <h3>Motion quality</h3>
-The first evaluation task will measure motion quality, in other words, to what degree do the evaluators perceive the overall movements to be natural-looking gesturing, without considering the speech. For this evaluation, the stimuli will be silent videos, and we will perform pairwise comparisons of motions from different sources (e.g., gesture-generation systems, baselines, or mocap data). 
+The first evaluation task will measure motion quality, in other words, to what degree do the evaluators perceive the overall movements to be natural-looking gesturing, without considering the speech. For this evaluation, the stimuli will be <b>silent videos</b>, and we will perform pairwise comparisons of motions from different sources (e.g., gesture-generation systems, baselines, or mocap data). 
 
-The statistical analysis will use an Elo-style ranking system, in particular the Bradley-Terry model, similar to the methodology of <a href="https://lmarena.ai/">Chatbot Arena</a>. You can read more about Elo scores and the Bradley-Terry model in <a href="https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model">this blog post</a>. We believe that this approach will prove to be a highly scalable and efficient method, with interpretable results, that allows us to conduct sustainable recurring evaluations for each future submission separately.
+The statistical analysis will use an Elo-style ranking system, in particular the Bradley-Terry model, similar to the methodology of <a href="https://lmarena.ai/">Chatbot Arena</a>. You can read more about Elo scores and the Bradley-Terry model in <a href="https://lmsys.org/blog/2023-12-07-leaderboard/#transition-from-online-elo-rating-system-to-bradley-terry-model">this blog post</a>; the key point is that 1) Elo-like systems naturally work well in a leaderboard setting where scores are continuously updated and the comparisons are not necessarily exhaustive; 2) the difference between the Elo scores of two systems directly expresses the probability that users prefer the output of one system over the output of the other.
+
+ We believe that this approach will prove to be a highly scalable and efficient method, with interpretable results, that allows us to conduct sustainable recurring evaluations for each future submission separately.
 
 <figure style="text-align: center; margin-bottom: 2em;">
 <img src="./assets/img/user_study_interface.png" width="50%"/>
@@ -139,24 +142,24 @@ Therefore, we will use a mismatching procedure based on the [GENEA Challenges](h
 This is also a pairwise comparison, but unlike the motion quality assessment, it can be performed for each system independently, therefore it avoids the confounding factor of motion quality.
 
 <h3>Future evaluations</h3>
-After the leaderboard becomes established, we will include new evaluation tasks based on what datasets become available, and what challenges become more important in the field. Some possibilities are to evaluate facial expressions, emotion expressivity, motion specificity to the meaning of the speech, and so on. (See our <a href="/leaderboard/position_paper">position paper for more details.)
+After the leaderboard becomes established, we will include new evaluation tasks based on what datasets become available, and what challenges become more important in the field. Some possibilities, already compatible with the BEAT2 dataset, are to evaluate facial expressions or emotion expressivity. For future datasets, it might become possible to test motion specificity to the meaning of the speech, and other types of grounding information. (See our <a href="/leaderboard/position_paper">position paper for more ideas.)
 
 <h1 style="color: #3979c0">Tooling</h1>
 <h2>Standardised visualisation</h2>
 Visualisation is one of the most important design choices for perceptual user studies that evaluate motion synthesis. Currently, almost every gesture-generation paper uses a different character model and 3D scene configuration due to difficulties of using animation software, as well as the lack of shared 3D assets. Because character appearence and other environmental factors can have a subtle but important effect on the evaluation, this means that human evaluation results are largely incomparable to each other.
 
-We are developing an open-source automated pipeline for rendering videos for our user studies, based on popular animation software (e.g., Blender), which will be shared with the community after we release the leaderboard. 
+We are creating a standardised visualisation setup with a realistic, but minimal 3D scene with lighting, and we will use a textured SMPL-X mesh as a high-quality human character model. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion.
 
 <figure style="text-align: center; margin-bottom: 2em;">
 <img src="./assets/img/render_snapshot.png" width="50%"/>
-<figcaption><i><b>TODO UPDATE</b> A preview of our renders.</i></figcaption>
+<figcaption><i>A preview of the rendering style we'll use for the Leaderboard.</i></figcaption>
 </figure>
 
-We will create a realistic, but minimal 3D scene with lighting, and we will use a textured SMPL-X mesh as a high-quality human character model. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion.
+We are currently working on an open-source, automated pipeline for rendering videos for our user studies, based on popular animation software (e.g., Blender), which will be shared with the community after we release the leaderboard. 
 
 <h2>User-study automation</h2>
 
-To standardise human evaluation, we are developing a new codebase for running experiments based on the HEMVIP codebase of the GENEA challenges. This software will also be open-sourced, and great emphasis will be placed on ease of use. Our vision is to enable independent replication of our evaluations.
+To standardise the human evaluation process, we are rewriting the HEMVIP codebase, which was used in the GENEA challenges, with an emphasis on stability and ease of use. This software will also be open-sourced -- our vision is to enable independent replication of our evaluations.
 
 <h2>Objective evaluation</h2>
 The leaderboard will also feature many commonly used objective metrics (e.g., FGD and beat consistency), and we are planning to develop new automated evaluation methods based on the collected human preference data. Each of these will be open-sourced with the release of the leaderboard.
