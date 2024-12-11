@@ -19,7 +19,7 @@ Our cumulative experience covers **all major aspects of gesture-generation resea
 * <b>visualisation tooling</b>: e.g., Blender, Maya, and Unreal Engine development
 
 --- 
-<h3 style="color: #3979c0">Organising team</h3>
+<h1 style="color: #3979c0">Organising team</h1>
 <!-- Picture row 1 -->
 <div class="organiser-grid">
     <div class="image-cont">
@@ -114,7 +114,7 @@ Our cumulative experience covers **all major aspects of gesture-generation resea
 
 ---
 
-<h3 style="color: #3979c0">Scientific advisors</h3>
+<h1 style="color: #3979c0">Scientific advisors</h1>
 While the organising team handles day-to-day operations, we are fortunate to be advised in key strategic decisions and the leaderboard methodology by three leading experts of <i>nonverbal communication, visual perception, human-agent interaction, and motion capture</i>:
  
 <div class="organiser-grid3">
