@@ -183,6 +183,9 @@ The leaderboard will also feature many commonly used objective metrics (e.g., FG
 </details>
 <br>
 
+<h1 align=left style="color: #3979c0">Contact address</h1>
+<p style=" font-size: 2em; text-align: center"><a style="color: #000000" href="mailto: genea-leaderboard@googlegroups.com">genea-leaderboard@googlegroups.com</a></p>
+
 
 <!-- 
 ---
