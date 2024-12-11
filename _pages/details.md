@@ -51,7 +51,7 @@ We think this data is the best candidate for an initial benchmark dataset for se
 
 <figure style="text-align: center; margin-bottom: 2em;">
 <img src="https://pantomatrix.github.io/EMAGE/assets/video_t.gif" alt="Official BEAT dataset gif that shows several animated speaking avatars." width="90%"/>
-<figcaption><i>Speaking characters from BEAT-2 visualised with the SMPL-X body model.</i></figcaption>
+<figcaption><i>Speaking characters from BEAT-2 visualised with the SMPL-X body model. <a href="https://pantomatrix.github.io/EMAGE/">(image source)</a></i></figcaption>
 </figure>
 
 Being a living leaderboard, the dataset used for benchmarking is expected to change in the future as better mocap datasets become available.
@@ -159,7 +159,7 @@ We are currently working on an open-source, automated pipeline for rendering vid
 
 <h2>User-study automation</h2>
 
-To standardise the human evaluation process, we are rewriting the HEMVIP codebase, which was used in the GENEA challenges, with an emphasis on stability and ease of use. This software will also be open-sourced -- our vision is to enable independent replication of our evaluations.
+To standardise the human evaluation process, we are rewriting the <a href="https://github.com/genea-workshop/hemvip">HEMVIP codebase</a>, which was originally developed for the GENEA challenges, with an emphasis on stability and ease of use. This software will also be open-sourced -- our vision is to enable independent replication of our evaluations, and to lower the barriers for crowd-sourced evaluations.
 
 <h2>Objective evaluation</h2>
 The leaderboard will also feature many commonly used objective metrics (e.g., FGD and beat consistency), and we are planning to develop new automated evaluation methods based on the collected human preference data. Each of these will be open-sourced with the release of the leaderboard.
