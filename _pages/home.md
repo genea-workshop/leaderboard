@@ -9,7 +9,7 @@ description: An overview of the leaderboard initiative
 <div align=center style="text-align: center; margin-bottom: 2em;">
 <img src="./assets/img/genea-logo_16.png" alt="The GENEA Leaderboard logo" width="100%"/>
 </div>
-<h1 align=right style="color: #ff3636;">Expected launch: 2025 June>.
+<h1 align=right style="color: #ff3636;">Expected launch: 2025 June./>
 
 <par style="font-size:1.7em;text-align: justify;"><b>Summary:</b> To improve benchmarking of <b>speech-driven gesture generation</b>, we are developing the online GENEA Leaderboard based on <b>large-scale human evaluation</b>.
 This is a cross between the previous <a href="https://svito-zar.github.io/GENEAchallenge2023/" rel="external nofollow noopener" target="_blank">GENEA Challenges in gesture generation</a>
