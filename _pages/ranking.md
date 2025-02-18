@@ -9,4 +9,4 @@ nav: true
 nav_order: 4
 ---
 
-Expected launch: 2025 March.
+Expected launch: 2025 June.
