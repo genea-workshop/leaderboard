@@ -37,22 +37,23 @@ Once the Leaderboard is operational, you will be able to:
 <h1 style="color: #3979c0">Setup and development timeline</h1>
 To construct the leaderboard, we are inviting authors of gesture-generation models published in recent years to participate in a large-scale evaluation. We will conduct comprehensive evaluation of the submitted systems, primarily based on human evaluation, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation. 
 
-Afterwards, the leaderboard will become open to the public in **March 2025**, and we will be updating it continuously as we receive new model submissions.
+Afterwards, the leaderboard will become open to the public in **June 2025**, and we will be updating it continuously as we receive new model submissions.
 
 <h1 style="color: #3979c0">Dataset</h1>
 <h3>BEAT-2 in the SMPL-X Format</h3>
-The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will <b>discard facial expressions</b> in order to focus on the hand- and body movements.
+The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will <b>hide facial expressions</b> in order to focus on the hand- and body movements.
+<figure style="text-align: center; margin-bottom: 2em;">
+<video width="80%" controls>
+<source src="./assets/video/smplx_render_example.mp4" type="video=mp4"> ERROR: Your browser could not load the example video.
+</video>
+<figcaption><i>An example video clip rendered from the BEAT-2 dataset. The avatar is a textured  <a href="https://smpl-x.is.tue.mpg.de/">SMPL-X mesh</a>.</i></figcaption>
+</figure>
 
 We think this data is the best candidate for an initial benchmark dataset for several reasons:
 1. It’s the largest public mocap dataset of gesturing (with 60 hours of data in total).
 2. BEAT, its predecessor, is one of the most commonly used gesture-generation datasets in recent years.
 3. It has a high variety of speakers and emotions, and it includes semantic gesture annotations.
 4. The SMPL-X format is compatible with many other mocap datasets, the majority of pose estimation models, and includes potential extensions (e.g., facial expressions for future iterations).
-
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="https://pantomatrix.github.io/EMAGE/assets/video_t.gif" alt="Official BEAT dataset gif that shows several animated speaking avatars." width="90%"/>
-<figcaption><i>Speaking characters from BEAT-2 visualised with the SMPL-X body model. <a href="https://pantomatrix.github.io/EMAGE/">(image source)</a></i></figcaption>
-</figure>
 
 Being a living leaderboard, the dataset used for benchmarking is expected to change in the future as better mocap datasets become available.
 
@@ -130,8 +131,8 @@ The statistical analysis will use an Elo-style ranking system, in particular the
  We believe that this approach will prove to be a highly scalable and efficient method, with interpretable results, that allows us to conduct sustainable recurring evaluations for each future submission separately.
 
 <figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/user_study_interface.png" width="50%"/>
-<figcaption><i>A sketch of the evaluation interface for the user studies.</i></figcaption>
+<img src="./assets/img/hemvip_gui.png" style="border: 1px solid black;" width="100%"/>
+<figcaption><i>A preview of the evaluation interface used in our studies.</i></figcaption>
 </figure>
 
 <h3>Motion specificity to speech</h3>
@@ -148,14 +149,9 @@ After the leaderboard becomes established, we will include new evaluation tasks 
 <h2>Standardised visualisation</h2>
 Visualisation is one of the most important design choices for perceptual user studies that evaluate motion synthesis. Currently, almost every gesture-generation paper uses a different character model and 3D scene configuration due to difficulties of using animation software, as well as the lack of shared 3D assets. Because character appearence and other environmental factors can have a subtle but important effect on the evaluation, this means that human evaluation results are largely incomparable to each other.
 
-We are creating a standardised visualisation setup with a realistic, but minimal 3D scene with lighting, and we will use a textured SMPL-X mesh as a high-quality human character model. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion.
+We will use a standardised visualisation setup, containining a textured SMPl-X mesh as a human character model, and a minimal 3D scene with lighting. There will be an option to hide the face in the videos, since our first evaluations will only be based on hand- and body motion. **The videos shown above on this page are previews of our visualisation setup.**
 
-<figure style="text-align: center; margin-bottom: 2em;">
-<img src="./assets/img/render_snapshot.png" width="50%"/>
-<figcaption><i>A preview of the rendering style we'll use for the Leaderboard.</i></figcaption>
-</figure>
-
-We are currently working on an open-source, automated pipeline for rendering videos for our user studies, based on popular animation software (e.g., Blender), which will be shared with the community after we release the leaderboard. 
+We are currently working on an open-source, automated pipeline for rendering videos for our user studies, based on our previous <a href="https://github.com/TeoNikolov/genea_visualizer/">GENEA Blender visualiser</a>. The updated pipeline will be shared with the community after we release the leaderboard. 
 
 <h2>User-study automation</h2>
 
