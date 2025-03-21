@@ -22,13 +22,13 @@ and <a href="https://crfm.stanford.edu/helm/heim/v1.0.0/#/" rel="external nofoll
 <h1 align=left style="color: #3979c0">Timeline and setup</h1>
 **(For comprehensive details regarding our current evaluation, please visit our [Details](/leaderboard//details) page.)**
 
-The GENEA leaderboard is currently in active development, with the launch scheduled in 2025 March. After launch, submissions will be open to the public. Being a living benchmark, the leaderboard dataset and its evaluations are expected to evolve over time, following the needs of the community.
+The GENEA leaderboard is currently in active development, with the launch scheduled in 2025 June. After launch, submissions will be open to the public. Being a living benchmark, the leaderboard dataset and its evaluations are expected to evolve over time, following the needs of the community.
 
 We will start operating the leaderboard under the following settings:
 * The Leaderboard will be based on the body movements of the BEAT-2 dataset in the SMPL-X format. Facial expressions will not be considered for now.
-* We will accept submissions for already published models, in the form of synthetic SMPL-X motion data generated from the test inputs of the above dataset, until the end of **2025 January**.
+* We will accept submissions for already published models, in the form of synthetic SMPL-X motion data generated from the test inputs of the above dataset, until the start of **2025 May**.
 * The human evaluation methodology will initially only measure **motion quality** and **motion-speech appropriateness**, as defined in the <a href="https://svito-zar.github.io/GENEAchallenge2023/">GENEA Challenge 2023</a>.
-* The results of this first round of evaluation will be released in **2025 March**, and published in a state-of-the-art report co-authored with participating authors.
+* The results of this first round of evaluation will be released in **2025 June**, and published in a state-of-the-art report co-authored with participating authors.
 
 After the first results are released, we will open up the Leaderboard to the public (including newly developed models) and we will consistently perform evaluations, update the ranking, and publish new resources (e.g., votes and rendered videos) on throughout the year.
 
