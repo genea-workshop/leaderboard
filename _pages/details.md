@@ -44,7 +44,7 @@ Afterwards, the leaderboard will become open to the public in **June 2025**, and
 The leaderboard will initially evaluate models using the English recordings in the test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/). Submissions will be required to be in the same SMPL-X format as the dataset, but we will <b>hide facial expressions</b> in order to focus on the hand- and body movements.
 <figure style="text-align: center; margin-bottom: 2em;">
 <video width="80%" controls>
-<source src="https://genea-workshop.github.io/leaderboard/assets/video/smplx_render_example.mp4" type="video=mp4"> ERROR: Your browser could not load the example video.
+<source src="./assets/video/smplx_render_example.mp4" type="video/mp4"> ERROR: Your browser could not load the example video.
 </video>
 <figcaption><i>An example video clip rendered from the BEAT-2 dataset. The avatar is a textured  <a href="https://smpl-x.is.tue.mpg.de/">SMPL-X mesh</a>.</i></figcaption>
 </figure>
