@@ -43,7 +43,7 @@
         <li>The SMPL-X format is compatible with many other mocap datasets, the majority of pose estimation models, and includes potential extensions (e.g., facial expressions for future iterations).</li> 
       </ol> 
       <p>Being a living leaderboard, the dataset used for benchmarking is expected to change in the future as better mocap datasets become available.</p> 
-      <h1 class="h1" style="color: #3979c0">Submission process</h1> 
+      <!-- <h1 class="h1" style="color: #3979c0">Submission process</h1> 
       <h2 class="h2">Rules for participation</h2> 
       <p>The main goal of the GENEA Leaderboard is to advance the scientific field of automated gesture generation. To best achieve this, we have a few requirements for participation:</p> 
       <ol style="display: grid; gap: 10px"> 
@@ -75,7 +75,7 @@
         <li> <b>Crowd-sourced evaluations</b>: Once we have received enough submissions, we will conduct rigorous large-scale user studies, as detailed below on this page, and perform statistical analysis on the results. </li> 
         <li> <b>Release of data and evaluation results</b>: We will update the leaderboard based on the statistical results, and publish all of your rendered videos alongside your technical report. </li> 
         <li> <b>State-of-the-art report</b>: Periodically, we will invite participating teams to co-author a detailed state-of-the-art report, based on a snapshot of the leaderboard, in the style of the GENEA Challenge papers.</li> 
-      </ol> 
+      </ol>  -->
       <h1 class="h1" style="color: #3979c0">Evaluation methodology</h1> 
       <p>We will recruit large numbers of evaluators to conduct best-practices human evaluation. Our perceptual user studies will be designed to carefully disentangle key aspects of gesture evaluation, following what we learned from organising the <a href="https://linktr.ee/genea_workshop" rel="external nofollow noopener" target="_blank">2020–2023 GENEA challenges</a>.</p> 
       <h2 class="h2" style="color: #3979c0">Evaluation tasks</h2> 
@@ -118,7 +118,7 @@
       </details> 
       <p><br></p> 
       <h1 class="h1" style="color: #3979c0; align: left">Contact address</h1> 
-      <p style=" font-size: 2em; text-align: center"><a style="color: #000000" href="mailto:%20genea-leaderboard@googlegroups.com">genea-leaderboard@googlegroups.com</a></p> 
+      <p style=" font-size: 2em; text-align: center"><a href="mailto:%20genea-leaderboard@googlegroups.com">genea-leaderboard@googlegroups.com</a></p> 
     </div> 
   </div>
 </main>
