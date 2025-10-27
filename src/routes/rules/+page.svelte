@@ -3,7 +3,7 @@
 
 <main class="subcontainer">
   <div class="home-split-ver">
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1">Rules</h1>
       <p class="lead">
         Welcome to the <strong>GENEA Leaderboard</strong> project!  

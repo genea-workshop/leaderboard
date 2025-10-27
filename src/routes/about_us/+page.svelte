@@ -4,7 +4,7 @@
 
 <main class="subcontainer">
   <div class="home-split-ver">
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1">Who are we?</h1>
       <p class="lead">
         Our international team includes <strong>leading experts on the evaluation of gesture-generation models</strong>, as well as <strong>experienced model developers</strong> and <strong>research engineers</strong> with experience in deploying gesture-generation models. Together, we are developing the leaderboard and its associated tooling, and we will be responsible for managing and funding year-round crowdsourced human evaluations.
@@ -19,7 +19,7 @@
         <li><strong>visualisation tooling</strong>: e.g., Blender, Maya, and Unreal Engine development</li>
       </ul>
     </div>
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1">Organizers</h1>
       <div class="image-grid">
         <div class="image-item">
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1">Scientific advisors</h1>
       <p>While the organising team handles day-to-day operations, we are fortunate to be advised in key strategic decisions and the leaderboard methodology by three leading experts of nonverbal communication, visual perception, human-agent interaction, and motion capture:</p>
       <div class="image-grid2">

@@ -4,10 +4,10 @@
 
 <main class="subcontainer">
   <div class="home-split-ver">
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1">Visualization Tools</h1>
       <div class="home-split-ver">
-        <div class="home-text card with-image">
+        <div class="card with-image">
           <div class="text-content">
             <a href="{resolve('/BVHView/bvhview.html' as any)}" target="_blank" class="links"><h1 class="h1">BVHView</h1></a>
             <p class="lead">
@@ -21,7 +21,7 @@
           />
         </div>
 
-        <div class="home-text card with-image">
+        <div class="card with-image">
           <div class="text-content">
             <a href="https://github.com/TeoNikolov/genea_visualizer/tree/dev-2025" target="_blank" class="links"><h1 class="h1">Blender</h1></a>
             <p class="lead">
@@ -40,18 +40,18 @@
     <div class="card">
       <h1 class="h1">Datasets</h1>
       <div class="home-split-hor2">
-        <div class="home-text card">
+        <div class="card">
           <a href="https://pantomatrix.github.io/EMAGE/" target="_blank" class="links"><h3 style="text-align: center;">BEAT-2</h3></a>
         </div>
-        <div class="home-text card">
+        <div class="card">
           <a href="https://github.com/facebookresearch/TalkingWithHands32M" target="_blank" class="links"><h3 style="text-align: center;">Talking with Hands</h3></a>
         </div>
 
-        <div class="home-text card">
+        <div class="card">
           <a href="https://smpl-x.is.tue.mpg.de/index.html" target="_blank" class="links"><h3 style="text-align: center;">SMPL-X</h3></a>
         </div>
 
-        <div class="home-text card">
+        <div class="card">
           <a href="https://www.projectaria.com/datasets/nymeria/" target="_blank" class="links"><h3 style="text-align: center;">Nymeria</h3></a>
         </div>
       </div>

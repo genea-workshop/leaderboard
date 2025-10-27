@@ -86,3 +86,24 @@
   width: 0%;
   transition: width 0.1s linear;
 }
+
+.nav-item:focus, .nav-link:focus, .dropbtn:focus, .btn:focus {
+  outline: 3px solid rgba(0,170,255,0.14);
+  outline-offset: 2px;
+}
+
+.nav-split-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+}
+
+.github-icon {
+  width: 22px;
+  height: 22px;
+  filter: var(--github-filter, invert(0));
+}

@@ -13,4 +13,5 @@ html, body {
 
 body {
     background: var(--bg);
+    width: auto;
 }

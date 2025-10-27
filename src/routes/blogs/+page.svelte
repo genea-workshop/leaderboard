@@ -4,7 +4,7 @@
 
 <main class="subcontainer">
   <div class="home-split-ver">
-    <div class="home-text card">
+    <div class="card">
       <h1 class="h1" style="color: #3979c0"> About the Leaderboard</h1> 
       <p>The GENEA Gesture Generation Leaderboard is an upcoming living benchmark for gesture generation models. It allows researchers to test and showcase their models’ performance on a standardised dataset and evaluation methodology.</p> 
       <p>Initially, the leaderboard will feature results from existing models that have been adapted to the BEAT-2 dataset. Following this initial phase, we’ll open the leaderboard to all researchers interested in submitting and evaluating new models.</p> 

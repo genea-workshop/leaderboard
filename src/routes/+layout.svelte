@@ -65,7 +65,7 @@
       <a class="nav-link" href="{resolve('/about_us')}">About Us</a>
     </div>
 
-    <div class="nav-right home-split-layout">
+    <div class="nav-right nav-split-layout">
       <a
         href="mailto:genea-leaderboard@googlegroups.com"
         class="github-link"

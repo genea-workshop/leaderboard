@@ -2,6 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 25%;
+    position: relative;
+}
+
+.see-full {
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--link-color);
+  cursor: pointer;
+  transition: color 0.2s ease;
 }

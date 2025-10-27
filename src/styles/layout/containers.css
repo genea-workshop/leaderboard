@@ -3,18 +3,19 @@
   display: flex;
   padding-top: var(--nav-height);
   padding-bottom: 2rem;
-  justify-content: center;
   position: static;
-  overflow-y: visible;
+  overflow-y: scroll;
+  overflow-x: scroll;
   background: var(--bg);
+  width: 100%;
+  height: auto;
 }
 
 /* Sub section container */
 .subcontainer {
+  width: 100%;
   display: block;
   max-width: var(--nav-max-width);
   margin: 0 auto;
   min-height: var(--navbar-height);
-  align-items:  center;
-  justify-content: center;
 }

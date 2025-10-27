@@ -1,0 +1,67 @@
+.leaderboard-preview {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.leaderboard-preview thead th {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--table-header-background);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--table-outline);
+}
+
+/* Table body rows */
+.leaderboard-preview tbody tr {
+  transition: background .12s ease;
+}
+
+/* Alternate row colors */
+/* .leaderboard-preview tbody tr:nth-child(odd) {
+  background: var(--row-odd);
+}
+
+.leaderboard-preview tbody tr:nth-child(even) {
+  background: var(--row-even);
+} */
+
+.leaderboard-preview tbody tr:hover {
+  background: var(--row-hover);
+}
+
+/* Cells */
+.leaderboard-preview td {
+  padding: 12px 10px;
+  text-align: center;
+  border-right: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Special columns */
+.leaderboard-preview td.rank {
+  font-weight: 700;
+}
+
+.leaderboard-preview td.model, .leaderboard-preview td.team {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Score column highlight */
+.leaderboard-preview td.score {
+  color: var(--score-color);
+  font-weight: 700;
+}
