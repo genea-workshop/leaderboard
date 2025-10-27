@@ -8,6 +8,10 @@
   let rows: LeaderboardRow[] = [];
   let loading = true;
 
+  export let columns: (keyof LeaderboardRow)[] = [
+    'name', 'elo_hl', 'mismatch'
+  ];
+
   onMount(async () => {
     try {
       const res = await fetch(
@@ -57,7 +61,7 @@
             <p>Loading leaderboard...</p>
           </div>
         {:else}
-          <LeaderboardTable rows={rows.slice(0, 10)} showSearch={false} />
+          <LeaderboardTable rows={rows.slice(0, 10)} columnsA={columns} showSearch={false} />
         {/if}
       </div>
       <a class="see-full" on:click={goToLeaderboard}>

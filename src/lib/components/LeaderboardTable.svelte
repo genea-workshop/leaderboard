@@ -8,11 +8,11 @@
   // ];
 
   export let columnsA: (keyof LeaderboardRow)[] = [
-    'rank', 'name', 'elo_hl', 'mismatch'
+    'name', 'paper_venue', 'acceptance_year' , 'elo_hl', 'mismatch'
   ];
 
   export let columnsB: (keyof LeaderboardRow)[] = [
-    'rank', 'name', 'fgd', 'ba', 'srgr', 'div_pose', 'div_sample'
+    'name', 'fgd', 'ba', 'srgr', 'div_pose', 'div_sample'
   ];
 
   let sortKey: keyof LeaderboardRow | null = null;
@@ -68,8 +68,25 @@
     div_pose: { label: 'Div-P', tooltip: 'Pose Diversity' },
     div_sample: { label: 'Div-S', tooltip: 'Sample Diversity' },
     paper_venue: { label: 'Venue', tooltip: 'Publication venue' },
+    acceptance_year: { label: 'Year', tooltip: 'Publication year' },
     elo_hl: { label: 'Elo-HL', tooltip: 'Human-likeness score from Elo rating' },
     mismatch: { label: 'MM', tooltip: 'Mismatch preference' }
+  };
+
+  const columnLabels: Record<string, string> = {
+    rank: '#',
+    name: 'Name',
+    fgd: 'FGD',
+    fd_g: 'FD-G',
+    fd_k: 'FD-K',
+    ba: 'BA',
+    srgr: 'SRGR',
+    div_pose: 'Div-Pose',
+    div_sample: 'Div-Sample',
+    paper_venue: 'Venue',
+    acceptance_year: 'Year',
+    elo_hl: 'Elo-HL',
+    mismatch: 'Mismatch'
   };
 </script>
 
@@ -100,7 +117,9 @@
         {#each columns as col}
         <th title={columnInfo[col]?.tooltip} class="" on:click={() => sortBy(col)}>
           <span class="sort-arrow">
-            <text class="leaderboard-header-text">{col.charAt(0).toUpperCase() + col.slice(1)}</text> {sortKey === col ? (ascending ? '▲' : '▼') : '-'}
+            <text class="leaderboard-header-text">
+              {columnLabels[col] || col}
+            </text> {sortKey === col ? (ascending ? '▲' : '▼') : '-'}
           </span>
         </th>
       {/each}

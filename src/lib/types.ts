@@ -18,7 +18,8 @@ export interface LeaderboardRow {
   srgr?: number;
   div_pose?: number;
   div_sample?: number;
-  paper_venue: string;
+  paper_venue?: string;
+  acceptance_year?: number;
   elo_hl?: number;
   mismatch?: number;
   link?: string;

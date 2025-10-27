@@ -36,6 +36,10 @@
   <div class="home-split-ver">
     <div class="leaderboard-table card">
       <h1 class="h1">Leaderboard</h1>
+      <p style="font-size: 0.9em;">To better understand the metrics - 
+        <a href="https://arxiv.org/abs/2410.06327" target="_blank"><strong>Paper</strong></a> 
+        <br> To find videos of the systems - <strong>Zenodo</strong>
+      </p>
       <div class="leaderboard-wrapper">
         {#if loading}
           <div class="loading-container">

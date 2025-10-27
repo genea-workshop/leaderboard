@@ -30,6 +30,7 @@
 }
 
 @media (max-width: 800px) {
+  :root { --nav-max-width: 800px; }
   .nav-left .site-logo { width: 64px; height: 16px; }
   .nav-center { gap: 0.5em; }
   .nav-center .nav-link { padding: 3px 6px; }
@@ -48,5 +49,14 @@
 }
 
 @media (max-width: 400px) {
-  :root { --nav-max-width: 400px; }
+  :root { --nav-max-width: 400px; --nav-height: 120px;}
+  .navbar-wrap { display: flex; flex-direction: column; }
+  .nav-left .site-logo { width: 64px; height: 16px; }
+  .nav-center { gap: 0.5em; }
+  .nav-center .nav-link { padding: 3px 6px; }
+  .nav-right { max-width: 108px; }
+  .github-icon { width: 16px; height: 16px; }
+  .home-split-hor { display: flex; flex-direction: column; }
+  .image-grid { grid-template-columns: repeat(1, 1fr); }
+  .image-grid2 { grid-template-columns: repeat(1, 1fr); }
  }
