@@ -50,6 +50,19 @@
   .home-split-hor2 { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 500px) {
+  :root { --nav-max-width: 500px; --navbar-height: 64px}
+  /* .navbar-wrap { display: flex; flex-direction: column; } */
+  .navbar { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .nav-left { flex: 50%; display: flex; position: static; }
+  .nav-center { order: 2; display: flex; flex-wrap: wrap; gap: 1rem; }
+  .nav-right { flex: 50%; display: flex; position: absolute; top: 5%;}
+  .github-icon { width: 16px; height: 16px; }
+  .home-split-hor { display: flex; flex-direction: column; }
+  .image-grid { grid-template-columns: repeat(1, 1fr); }
+  .image-grid2 { grid-template-columns: repeat(1, 1fr); }
+}
+
 @media (max-width: 400px) {
   :root { --nav-max-width: 400px; --navbar-height: 64px}
   /* .navbar-wrap { display: flex; flex-direction: column; } */
