@@ -1,0 +1,13 @@
+@media (max-width: 1100px) {
+  .home-split { grid-template-columns: 1fr; }
+  .submit-split { grid-template-columns: 1fr; }
+  .navbar { padding: 12px; }
+  .nav-center { display: none; }
+}
+
+@media (max-width: 760px) {
+  .nav-left .site-logo { display: none; }
+  .nav-right { gap: 8px; }
+  .leaderboard-table thead th { font-size: 13px; padding: 10px; }
+  .leaderboard-table td { padding: 8px; font-size: 13px; }
+}

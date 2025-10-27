@@ -1,0 +1,88 @@
+/* ========== NAVBAR ========== */
+.navbar-wrap {
+  width: 100%;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0%;
+}
+
+.navbar {
+  width: 100%;
+  max-width: var(--nav-max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.4rem 1rem;
+  background: var(--nav-bg);
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-left,
+.nav-right {
+  position: absolute;
+}
+
+.nav-left {
+  left: 1rem;
+}
+
+.nav-right {
+  right: 1rem;
+}
+
+/* Navigation links */
+.nav-link,
+.dropbtn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect inversion */
+.nav-link:hover,
+.dropbtn:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+.nav-link-home {
+  padding: 0px 60px;
+}
+
+.nav-link-extra {
+  background-color: #3284ff;
+  color: #ffffff;
+}
+
+.links {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.scroll-progress {
+  position: fixed;
+  float: left;
+  left: 0;
+  margin-top: var(--navbar-height);
+  height: 1px;
+  background: var(--accent, #00aaff);
+  width: 0%;
+  transition: width 0.1s linear;
+}

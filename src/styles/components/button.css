@@ -1,0 +1,29 @@
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* padding: 6px;
+  border-radius: 4px;
+  transition: background 0.2s ease; */
+}
+
+.github-icon {
+  width: 22px;
+  height: 22px;
+  filter: var(--github-filter, invert(0));
+}
+
+/* Hover and theme-aware coloring */
+/* .github-link:hover {
+  background: var(--btn-hover-bg);
+} */

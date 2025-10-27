@@ -1,0 +1,14 @@
+.site-logo-link {
+  cursor: pointer;
+}
+
+.site-logo-link:focus {
+  outline: 3px solid rgba(0,170,255,0.3);
+  outline-offset: 2px;
+}
+
+.site-logo {
+  width: 128px;
+  height: 32px;
+  background: url('/logo.png') center center / contain no-repeat;
+}

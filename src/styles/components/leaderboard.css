@@ -1,0 +1,95 @@
+.leaderboard-table {
+  border-collapse: collapse;
+  width: var(--nav-max-width);
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* min-height: 1075px; */
+}
+
+.leaderboard-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--table-header-background);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--table-outline);
+}
+
+/* Table body rows */
+.leaderboard-table tbody tr {
+  transition: background .12s ease;
+}
+
+/* Alternate row colors */
+/* .leaderboard-table tbody tr:nth-child(odd) {
+  background: var(--row-odd);
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background: var(--row-even);
+} */
+
+.leaderboard-table tbody tr:hover {
+  background: var(--row-hover);
+}
+
+/* Cells */
+.leaderboard-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-right: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Special columns */
+.leaderboard-table td.rank {
+  font-weight: 700;
+}
+
+.leaderboard-table td.model, .leaderboard-table td.team {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Score column highlight */
+.leaderboard-table td.score {
+  color: var(--score-color);
+  font-weight: 700;
+}
+
+.leaderboard-table-search {
+  padding: 12px;
+  width: 20%;
+}
+
+.leaderboard-search {
+  padding: 12px;
+  width: 100%;
+}
+
+.leaderboard-table-inner {
+  width: 100%;
+}
+
+.leaderboard-header-text {
+  color: var(--nav-contrast);
+  visibility: visible;
+}
+
+.leaderboard-header-text:hover {
+  cursor: pointer;
+}
+
+/* Table outer thin border */
+.leaderboard-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--table-outline);
+}
