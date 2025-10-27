@@ -81,7 +81,7 @@
   float: left;
   left: 0;
   margin-top: var(--navbar-height);
-  height: 1px;
+  height: 3px;
   background: var(--accent, #00aaff);
   width: 0%;
   transition: width 0.1s linear;
