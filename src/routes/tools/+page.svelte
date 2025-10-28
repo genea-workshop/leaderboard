@@ -36,25 +36,5 @@
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <h1 class="h1">Datasets</h1>
-      <div class="home-split-hor2">
-        <div class="card">
-          <a href="https://pantomatrix.github.io/EMAGE/" target="_blank" class="links"><h3 style="text-align: center;">BEAT-2</h3></a>
-        </div>
-        <div class="card">
-          <a href="https://github.com/facebookresearch/TalkingWithHands32M" target="_blank" class="links"><h3 style="text-align: center;">Talking with Hands</h3></a>
-        </div>
-
-        <div class="card">
-          <a href="https://smpl-x.is.tue.mpg.de/index.html" target="_blank" class="links"><h3 style="text-align: center;">SMPL-X</h3></a>
-        </div>
-
-        <div class="card">
-          <a href="https://www.projectaria.com/datasets/nymeria/" target="_blank" class="links"><h3 style="text-align: center;">Nymeria</h3></a>
-        </div>
-      </div>
-    </div>
   </div>
 </main>
