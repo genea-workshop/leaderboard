@@ -36,9 +36,9 @@
   <div class="home-split-ver">
     <div class="leaderboard-table card">
       <h1 class="h1">Leaderboard</h1>
-      <p style="font-size: 0.9em;">To better understand the metrics - 
-        <a href="https://arxiv.org/abs/2410.06327" target="_blank"><strong>Paper</strong></a> 
-        <br> To find videos of the systems - <strong>Zenodo</strong>
+      <p style="font-size: 0.9em;">For details on our evaluation, please view our new preprint - 
+        <a href="https://github.com/genea-workshop/leaderboard/blob/main/static/GENEA_benchmark_preprint.pdf" target="_blank"><strong>Gesture Generation (Still) Needs Improved Human Evaluation Practices: Insights from a Community-Driven State-of-the-Art Benchmark</strong></a> 
+        <br> To view rendered videos from the models and from the dataset, see <a href="https://drive.google.com/drive/folders/1fnCOaUyvpfId6UfF8gVafwoB_fCH_AxK?usp=sharing" target="_blank"><strong>this Google Drive folder</strong></a>
       </p>
       <div class="leaderboard-wrapper">
         {#if loading}
