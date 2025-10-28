@@ -51,16 +51,5 @@
         {/if}
       </div>
     </div>
-
-    <div class="image-gallery card">
-      <img
-        src="{resolve('/motion_realism_elo_results.jpg' as any)}"
-        alt="Motion realism results"
-      >
-      <img
-        src="{resolve('/mismatching_pref_results_split_ties.jpg' as any)}"
-        alt="Mismatching preference results"
-      >
-    </div>
   </div>
 </main>
