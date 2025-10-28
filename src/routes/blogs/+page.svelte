@@ -5,7 +5,7 @@
 <main class="subcontainer">
   <div class="home-split-ver">
     <div class="card">
-      <h1 class="h1" style="color: #3979c0"> About the Leaderboard</h1> 
+      <h1 class="h1" style="color: #3979c0">About the Leaderboard</h1> 
       <p>The GENEA Gesture Generation Leaderboard is an upcoming living benchmark for gesture generation models. It allows researchers to test and showcase their models’ performance on a standardised dataset and evaluation methodology.</p> 
       <p>Initially, the leaderboard will feature results from existing models that have been adapted to the BEAT-2 dataset. Following this initial phase, we’ll open the leaderboard to all researchers interested in submitting and evaluating new models.</p> 
       <h2  class="h2">Our goals</h2> 
@@ -24,10 +24,10 @@
         <li> <b>Visualise</b> your generated motion and <b>conduct our user studies</b> on your own <b>using our easy-to-use open-source tools</b>; </li> 
         <li> ...and much more! </li> 
       </ul> 
-      <h1 class="h1" style="color: #3979c0">Setup and development timeline</h1> 
+      <!-- <h1 class="h1" style="color: #3979c0">Setup and development timeline</h1> 
       <p>To construct the leaderboard, we are inviting authors of gesture-generation models published in recent years to participate in a large-scale evaluation. We will conduct comprehensive evaluation of the submitted systems, primarily based on human evaluation, which will then be published on our website, alongside all collected outputs, ratings, and scripts necessary for reproducing the evaluation.</p> 
       <p>Afterwards, the leaderboard will become open to the public in <strong>June 2025</strong>, and we will be updating it continuously as we receive new model submissions.</p> 
-      <h1 class="h1" style="color: #3979c0">Dataset</h1> 
+      <h1 class="h1" style="color: #3979c0">Dataset</h1>  -->
       <h3 class="h3">BEAT-2 in the SMPL-X Format</h3> 
       <p>The leaderboard will initially evaluate models using the English recordings in the test split of the <a href="https://pantomatrix.github.io/EMAGE/" rel="external nofollow noopener" target="_blank">BEAT-2 dataset</a>. Submissions will be required to be in the same SMPL-X format as the dataset, but we will <b>hide facial expressions</b> in order to focus on the hand- and body movements.</p> 
       <figure style="text-align: center; margin-bottom: 2em;"> 

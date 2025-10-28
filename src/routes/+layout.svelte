@@ -57,7 +57,7 @@
 
     <div class="nav-center">
       <a class="nav-link" href="{resolve('/leaderboard')}">Leaderboard</a>
-      <a class="nav-link" href="{resolve('/blogs')}">Blog</a>
+      <a class="nav-link" href="{resolve('/blogs')}">Details</a>
       <a class="nav-link" href="{resolve('/tools')}">Tools</a>
       <!-- <a class="nav-link" href="{resolve('/rules')}">Rules</a> -->
       <a class="nav-link nav-link-extra" href="{resolve('/submit')}">Submit</a>
