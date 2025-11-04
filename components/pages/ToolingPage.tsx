@@ -30,11 +30,11 @@ const ToolCard: React.FC<{
 }
 
 
-const ToolsPage: React.FC = () => {
+const ToolingPage: React.FC = () => {
     return (
         <div className="space-y-12">
             <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h2 className="text-3xl font-bold text-brand-text mb-8">Visualization Tools</h2>
+                <h2 className="text-3xl font-bold text-brand-text mb-8">Visualization Tooling</h2>
                 <div className="space-y-8">
                     <ToolCard
                         title="Blender rendering script"
@@ -58,4 +58,4 @@ const ToolsPage: React.FC = () => {
     );
 };
 
-export default ToolsPage;
+export default ToolingPage;

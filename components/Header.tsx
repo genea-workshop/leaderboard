@@ -5,7 +5,7 @@ import { BASE_PATH } from '../constants';
 const PAGES: { id: Page; label: string; slug: string; }[] = [
   { id: 'Leaderboard', label: 'Leaderboard', slug: '' },
   { id: 'DataRelease', label: 'Data release', slug: 'data-release' },
-  { id: 'Tools', label: 'Tooling', slug: 'tools' },
+  { id: 'Tooling', label: 'Tooling', slug: 'tooling' },
   { id: 'Submit', label: 'Submit', slug: 'submit' },
   { id: 'AboutUs', label: 'About Us', slug: 'about-us' },
 ];

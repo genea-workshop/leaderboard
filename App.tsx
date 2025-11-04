@@ -5,15 +5,15 @@ import Footer from './components/Footer';
 import DataReleasePage from './components/pages/DataReleasePage';
 import SubmitPage from './components/pages/SubmitPage';
 import AboutUsPage from './components/pages/AboutUsPage';
-import ToolsPage from './components/pages/ToolsPage';
+import ToolingPage from './components/pages/ToolingPage';
 import { BASE_PATH } from './constants';
 
-export type Page = 'Leaderboard' | 'DataRelease' | 'Tools' | 'Submit' | 'AboutUs';
+export type Page = 'Leaderboard' | 'DataRelease' | 'Tooling' | 'Submit' | 'AboutUs';
 
 const pageToSlug: Record<Page, string> = {
   Leaderboard: '',
   DataRelease: 'data-release',
-  Tools: 'tools',
+  Tooling: 'tooling',
   Submit: 'submit',
   AboutUs: 'about-us',
 };
@@ -62,8 +62,8 @@ const App: React.FC = () => {
         return <Leaderboard onNavigate={handleNavigate} />;
       case 'DataRelease':
         return <DataReleasePage />;
-      case 'Tools':
-        return <ToolsPage />;
+      case 'Tooling':
+        return <ToolingPage />;
       case 'Submit':
         return <SubmitPage />;
       case 'AboutUs':
