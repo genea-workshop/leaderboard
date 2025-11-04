@@ -1,38 +1,51 @@
-# sv
+# GENEA Leaderboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is a sleek, polished website for the GENEA Leaderboard, which ranks AI models that animate speaking 3D characters. It measures two key dimensions: motion realism and speech-gesture alignment.
 
-## Creating a project
+The application is built with React, TypeScript, and Tailwind CSS, and uses Vite for local development and production builds.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Local Development
 
-```sh
-# create a new project in the current directory
-npx sv create
+For instructions on how to install dependencies, run the local development server, and build the project for production, please see **[build.md](./build.md)**.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Deployment to GitHub Pages
 
-## Developing
+You can easily deploy this static website to GitHub Pages for free.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Step 1: Push Your Code
 
-```sh
-npm run dev
+Commit and push all your project files (including the Vite configuration files) to the `main` branch of your GitHub repository.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Step 2: Build the Project
 
-## Building
+Before deploying, you must create a production build.
 
-To create a production version of your app:
+1.  **Important:** Make sure you have correctly set the `base` path in `vite.config.ts` to match your repository name, as described in `build.md`.
+2.  Run the build command locally:
+    ```bash
+    npm run build
+    ```
+    This will create a `dist` directory containing your website's static files.
 
-```sh
-npm run build
-```
+### Step 3: Configure GitHub Pages
 
-You can preview the production build with `npm run preview`.
+1.  In your GitHub repository, go to the **Settings** tab.
+2.  In the left sidebar, click on **Pages**.
+3.  Under the "Build and deployment" section, for the **Source**, select **Deploy from a branch**.
+4.  Under "Branch", select your `main` branch and the `/dist` folder.
+5.  Click **Save**.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Step 4: Access Your Site
+
+That's it! GitHub Pages will now deploy the contents of your `dist` folder. This process might take a few minutes.
+
+Once it's live, you'll see the URL for your deployed website at the top of the Pages settings, typically in the format:
+
+`https://<your-username>.github.io/<your-repository-name>/`
+
+---
+### Troubleshooting
+
+**My deployed site is showing a 404 error or assets are not loading.**
+
+This is almost always caused by an incorrect `base` path in `vite.config.ts`. Double-check that the `base` value is a string that starts and ends with a slash and exactly matches your repository name (e.g., `/my-cool-leaderboard/`). After fixing it, you must run `npm run build` again, commit, and push the updated `dist` folder to see the changes.
