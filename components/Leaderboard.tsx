@@ -163,12 +163,19 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
 
     if (automatedSortConfig) {
       const motionCaptureBA = motionCaptureEntryAutomated?.ba ?? 0;
+      const motionCaptureDivPose = motionCaptureEntryAutomated?.divPose ?? 0;
 
       sortableItems.sort((a, b) => {
         if (automatedSortConfig.key === 'ba') {
           const diffA = Math.abs(a.ba - motionCaptureBA);
           const diffB = Math.abs(b.ba - motionCaptureBA);
           return diffA - diffB;
+        }
+        
+        if (automatedSortConfig.key === 'divPose') {
+            const diffA = Math.abs(a.divPose - motionCaptureDivPose);
+            const diffB = Math.abs(b.divPose - motionCaptureDivPose);
+            return diffA - diffB;
         }
 
         const valA = a[automatedSortConfig.key];
@@ -194,7 +201,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
         fgd: 'ascending',
         ba: 'ascending',
         srgr: 'descending',
-        divPose: 'descending',
+        divPose: 'ascending',
         divSample: 'descending',
     };
     setAutomatedSortConfig({ key, direction: directionMap[key] });
@@ -269,6 +276,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
                 requestSort={requestAutomatedSort} 
                 sortConfig={automatedSortConfig}
                 motionCaptureBA={motionCaptureEntryAutomated?.ba}
+                motionCaptureDivPose={motionCaptureEntryAutomated?.divPose}
               />
             </>
           )}

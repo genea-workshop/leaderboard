@@ -13,35 +13,34 @@ interface AutomatedLeaderboardTableProps {
   requestSort: (key: AutomatedSortableKeys) => void;
   sortConfig: AutomatedSortConfig;
   motionCaptureBA?: number;
+  motionCaptureDivPose?: number;
 }
 
-const AutomatedLeaderboardTable: React.FC<AutomatedLeaderboardTableProps> = ({ data, requestSort, sortConfig, motionCaptureBA }) => {
+const AutomatedLeaderboardTable: React.FC<AutomatedLeaderboardTableProps> = ({ data, requestSort, sortConfig, motionCaptureBA, motionCaptureDivPose }) => {
   const getSortIndicator = (columnKey: AutomatedSortableKeys) => {
     const isSorted = sortConfig.key === columnKey;
-    const colorClass = isSorted 
-      ? 'text-brand-primary' 
-      : 'text-gray-400 group-hover:text-gray-500';
+    const colorClass = isSorted ? 'text-brand-primary' : 'text-gray-300 group-hover:text-gray-500';
 
-    // Map each column to its sort preference
-    const directionMap: Record<AutomatedSortableKeys, 'ascending' | 'descending'> = {
-        fgd: 'ascending', // lower is better
-        ba: 'ascending', // proximity, but handled as a special case
-        srgr: 'descending', // higher is better
-        divPose: 'descending', // higher is better
-        divSample: 'descending', // higher is better
+    const iconMap: Record<AutomatedSortableKeys, 'up' | 'down' | 'right'> = {
+        fgd: 'down',
+        ba: 'right',
+        srgr: 'up',
+        divPose: 'right',
+        divSample: 'up',
     };
+    const iconType = iconMap[columnKey];
 
-    if (columnKey === 'ba') {
+    if (iconType === 'right') {
       // Proximity is better, so use a right arrow.
       return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" /></svg>;
     }
 
-    if (directionMap[columnKey] === 'ascending') {
+    if (iconType === 'down') {
       // Lower is better, so use a down arrow.
       return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m7-7l-7 7-7-7" /></svg>;
     }
 
-    // Higher is better, so use an up arrow.
+    // 'up', Higher is better, so use an up arrow.
     return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 19V5M5 12l7-7 7 7" /></svg>;
   };
 
@@ -55,7 +54,13 @@ const AutomatedLeaderboardTable: React.FC<AutomatedLeaderboardTableProps> = ({ d
         : 'Beat Alignment (closer to Motion capture is better)'
     },
     { key: 'srgr', label: 'SRGR', tooltip: 'Semantic-relevant Gesture Recall (higher is better)' },
-    { key: 'divPose', label: 'Div-Pose', tooltip: 'Pose Diversity (higher is better)' },
+    { 
+      key: 'divPose', 
+      label: 'Div-Pose', 
+      tooltip: motionCaptureDivPose
+        ? `Pose Diversity (closer to Motion capture value of ${motionCaptureDivPose.toFixed(3)} is better)`
+        : 'Pose Diversity (closer to Motion capture is better)'
+    },
     { key: 'divSample', label: 'Div-Sample', tooltip: 'Sample Diversity (higher is better)' },
   ];
 
