@@ -1,16 +1,22 @@
-# 🧩 Setup Instructions for Local Development
 
-## **Step 1: Install NVM (Node.js Version Manager)**
+# Setup Instructions
+You can edit the website in two ways: in your browser via Github codespaces, or locally.
 
+## Local Development
+**Install NVM (Node.js Version Manager):**
 - **Windows:**  
   Download and run the [NVM for Windows installer](https://github.com/coreybutler/nvm-windows/releases/download/1.2.2/nvm-setup.exe).
 
 - **macOS / Linux:**  
   Follow the instructions in the [official NVM repository](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating).
 
----
+## Editing in the Browser 
+Visit [this link](https://github.dev/genea-workshop/leaderboard/tree/test) to set up a Codespaces environment. This will give you access to a full-blown VS Code editor in your browser. Magic! 
 
-## **Step 2: Set Up Node.js and Install Dependencies**
+**NOTE:** Please close the codespace site once you're done editing. There is an hour-based usage quota of 120 hours per month.
+
+# Set Up Node.js and Install Dependencies
+Regardless of whether you are developing locally or using Codespaces, you need to set up Node.js: 
 
 ```bash
 nvm install 20.19.5
@@ -18,14 +24,29 @@ nvm use 20.19.5
 npm install
 ```
 
----
-
-## **Step 3: Launch the Local Development Server**
+# Launch Development Server
+Start a development server with the following command:
 ```
 npm run dev
 ```
 
-The development server will start, and any code changes will automatically trigger a live update in your browser.
+You should see an output like
+```
+@nagyrajmund ➜ /workspaces/leaderboard (test) $ npm run dev
 
-## **Step 4: Deploy Changes to the Live Website**
+> genea-leaderboard@0.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 318 ms
+
+  ➜  Local:   http://localhost:5173/leaderboard/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
+
+Click on the localhost link to view your local deployment of the website. (Yes, this works in Codespaces as well.)
+Any code changes will automatically update the local website.
+
+# Deploy Changes to the Live Website
 Just commit and push your changes to the repository, and the website will be automatically updated by the configured Github Actions workflow.
