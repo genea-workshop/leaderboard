@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ToolCard: React.FC<{
-  title: string;
-  description: string[];
-  imageUrl: string;
-  link: string;
+    title: string;
+    description: string[];
+    imageUrl: string;
+    link: string;
 }> = ({ title, description, imageUrl, link }) => {
     return (
         <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-md overflow-hidden">
@@ -31,31 +31,31 @@ const ToolCard: React.FC<{
 
 
 const ToolsPage: React.FC = () => {
-  return (
-    <div className="space-y-12">
-        <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
-            <h2 className="text-3xl font-bold text-brand-text mb-8">Visualization Tools</h2>
-            <div className="space-y-8">
-                 <ToolCard
-                    title="Blender rendering script"
-                    link="https://github.com/TeoNikolov/genea_visualizer/tree/dev-2025"
-                    imageUrl="https://genea-workshop.github.io/leaderboard/blender.png"
-                    description={[
-                        "This is an easy-to-use blender rendering script used to create our user-study videos."
-                    ]}
-                />
-                <ToolCard
-                    title="BVHView GENEA fork"
-                    link="https://genea-workshop.github.io/leaderboard/BVHView/bvhview.html"
-                    imageUrl="https://genea-workshop.github.io/leaderboard/bvhview.png"
-                    description={[
-                        "BVHView is an open-source WebGL-based motion visualization tool designed to display motion capture data stored in BVH (Biovision Hierarchy) format. It allows users to load, inspect, and analyze skeletal animations directly in the browser, making it useful for researchers, animators, and developers working with motion data, gesture generation, or character animation systems."
-                    ]}
-                />
+    return (
+        <div className="space-y-12">
+            <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
+                <h2 className="text-3xl font-bold text-brand-text mb-8">Visualization Tools</h2>
+                <div className="space-y-8">
+                    <ToolCard
+                        title="Blender rendering script"
+                        link="https://github.com/TeoNikolov/genea_visualizer/tree/dev-2025"
+                        imageUrl="/leaderboard/assets/blender.png"
+                        description={[
+                            "This is an easy-to-use blender rendering script used to create our user-study videos."
+                        ]}
+                    />
+                    <ToolCard
+                        title="BVHView GENEA fork"
+                        link="https://genea-workshop.github.io/leaderboard/BVHView/bvhview.html"
+                        imageUrl="/leaderboard/assets/bvhview.png"
+                        description={[
+                            "BVHView is an open-source WebGL-based motion visualization tool designed to display motion capture data stored in BVH (Biovision Hierarchy) format. It allows users to load, inspect, and analyze skeletal animations directly in the browser, making it useful for researchers, animators, and developers working with motion data, gesture generation, or character animation systems."
+                        ]}
+                    />
+                </div>
             </div>
         </div>
-    </div>
-  );
+    );
 };
 
 export default ToolsPage;
