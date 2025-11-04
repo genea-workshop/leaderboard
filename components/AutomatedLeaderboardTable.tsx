@@ -12,22 +12,48 @@ interface AutomatedLeaderboardTableProps {
   data: AutomatedEvaluationEntry[];
   requestSort: (key: AutomatedSortableKeys) => void;
   sortConfig: AutomatedSortConfig;
+  motionCaptureBA?: number;
 }
 
-const AutomatedLeaderboardTable: React.FC<AutomatedLeaderboardTableProps> = ({ data, requestSort, sortConfig }) => {
+const AutomatedLeaderboardTable: React.FC<AutomatedLeaderboardTableProps> = ({ data, requestSort, sortConfig, motionCaptureBA }) => {
   const getSortIndicator = (columnKey: AutomatedSortableKeys) => {
-    if (sortConfig.key !== columnKey) {
-      return <svg className="w-4 h-4 ml-1.5 text-gray-300 group-hover:text-gray-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>;
+    const isSorted = sortConfig.key === columnKey;
+    const colorClass = isSorted 
+      ? 'text-brand-primary' 
+      : 'text-gray-400 group-hover:text-gray-500';
+
+    // Map each column to its sort preference
+    const directionMap: Record<AutomatedSortableKeys, 'ascending' | 'descending'> = {
+        fgd: 'ascending', // lower is better
+        ba: 'ascending', // proximity, but handled as a special case
+        srgr: 'descending', // higher is better
+        divPose: 'descending', // higher is better
+        divSample: 'descending', // higher is better
+    };
+
+    if (columnKey === 'ba') {
+      // Proximity is better, so use a right arrow.
+      return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" /></svg>;
     }
-    if (sortConfig.direction === 'ascending') {
-      return <svg className="w-4 h-4 ml-1.5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd"></path></svg>;
+
+    if (directionMap[columnKey] === 'ascending') {
+      // Lower is better, so use a down arrow.
+      return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m7-7l-7 7-7-7" /></svg>;
     }
-    return <svg className="w-4 h-4 ml-1.5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>;
+
+    // Higher is better, so use an up arrow.
+    return <svg className={`w-4 h-4 ml-1.5 transition-colors ${colorClass}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 19V5M5 12l7-7 7 7" /></svg>;
   };
 
   const tableHeaders: { key: AutomatedSortableKeys; label: string; tooltip: string }[] = [
     { key: 'fgd', label: 'FGD', tooltip: 'Fréchet Gesture Distance (lower is better)' },
-    { key: 'ba', label: 'BA', tooltip: 'Beat Alignment (higher is better)' },
+    { 
+      key: 'ba', 
+      label: 'BA', 
+      tooltip: motionCaptureBA
+        ? `Beat Alignment (closer to Motion capture value of ${motionCaptureBA.toFixed(3)} is better)`
+        : 'Beat Alignment (closer to Motion capture is better)'
+    },
     { key: 'srgr', label: 'SRGR', tooltip: 'Semantic-relevant Gesture Recall (higher is better)' },
     { key: 'divPose', label: 'Div-Pose', tooltip: 'Pose Diversity (higher is better)' },
     { key: 'divSample', label: 'Div-Sample', tooltip: 'Sample Diversity (higher is better)' },
