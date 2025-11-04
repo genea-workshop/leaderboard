@@ -1,5 +1,5 @@
 import React from 'react';
-import { LEADERBOARD_DATA, AUTOMATED_EVALUATION_DATA } from '../constants';
+import { LEADERBOARD_DATA, AUTOMATED_EVALUATION_DATA, BASE_PATH } from '../constants';
 import ScatterPlot from './ScatterPlot';
 import { LeaderboardEntry } from '../types';
 import EvaluationCriteria from './EvaluationCriteria';
@@ -61,12 +61,12 @@ const LeaderboardTable: React.FC<{
           {data.map((entry, index) => {
             const isMotionCapture = entry.modelName === 'Motion capture';
             return (
-              <tr 
-                key={entry.modelName} 
+              <tr
+                key={entry.modelName}
                 className={isMotionCapture ? "bg-amber-50/60" : "hover:bg-gray-50 transition-colors duration-200"}
               >
                 <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-brand-text sm:pl-6 text-center">
-                  {isMotionCapture 
+                  {isMotionCapture
                     ? <svg aria-label="Reference performance" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-amber-500 mx-auto" viewBox="0 0 20 20" fill="currentColor"><title>Reference</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                     : index
                   }
@@ -98,8 +98,8 @@ const LeaderboardTable: React.FC<{
                   <span className="ml-2 text-xs text-gray-400">[{entry.motionRealismEloCI[0]} - {entry.motionRealismEloCI[1]}]</span>
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text-muted">
-                   <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-secondary'} font-medium`}>{entry.speechGestureAlignmentPercentage.toFixed(1)}%</span>
-                   <span className="ml-2 text-xs text-gray-400">[{entry.speechGestureAlignmentPercentageCI[0].toFixed(1)}% - {entry.speechGestureAlignmentPercentageCI[1].toFixed(1)}%]</span>
+                  <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-secondary'} font-medium`}>{entry.speechGestureAlignmentPercentage.toFixed(1)}%</span>
+                  <span className="ml-2 text-xs text-gray-400">[{entry.speechGestureAlignmentPercentageCI[0].toFixed(1)}% - {entry.speechGestureAlignmentPercentageCI[1].toFixed(1)}%]</span>
                 </td>
               </tr>
             );
@@ -113,11 +113,10 @@ const LeaderboardTable: React.FC<{
 const ToggleButton: React.FC<{ active: boolean; onClick: () => void; children: React.ReactNode }> = ({ active, onClick, children }) => (
   <button
     onClick={onClick}
-    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-primary ${
-      active
-        ? 'bg-brand-primary text-white shadow'
-        : 'bg-gray-200 text-brand-text-muted hover:bg-gray-300'
-    }`}
+    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-primary ${active
+      ? 'bg-brand-primary text-white shadow'
+      : 'bg-gray-200 text-brand-text-muted hover:bg-gray-300'
+      }`}
     aria-pressed={active}
   >
     {children}
@@ -136,7 +135,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
 
   const displayHumanData = React.useMemo(() => {
     const motionCaptureEntry = LEADERBOARD_DATA.find(e => e.modelName === 'Motion capture');
-    
+
     let sortableItems = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture');
     if (humanSortConfig) {
       sortableItems.sort((a, b) => {
@@ -149,7 +148,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
         return 0;
       });
     }
-    
+
     return motionCaptureEntry
       ? [motionCaptureEntry, ...sortableItems]
       : sortableItems;
@@ -170,7 +169,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
         return 0;
       });
     }
-    
+
     return motionCaptureEntry ? [motionCaptureEntry, ...sortableItems] : sortableItems;
   }, [automatedSortConfig]);
 
@@ -187,35 +186,35 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
     const isDefaultAscending = key === 'fgd';
     let direction: 'ascending' | 'descending' = isDefaultAscending ? 'ascending' : 'descending';
     if (automatedSortConfig.key === key) {
-        direction = automatedSortConfig.direction === 'ascending' ? 'descending' : 'ascending';
+      direction = automatedSortConfig.direction === 'ascending' ? 'descending' : 'ascending';
     }
     setAutomatedSortConfig({ key, direction });
   };
 
-
+  const aboutUsPath = `${BASE_PATH || '/'}about-us`;
   return (
     <>
       <div className="mb-12">
         <p className="text-lg text-brand-text-muted max-w-4xl mx-auto text-justify">
           <span className="font-bold text-brand-text">Overview:</span> This community-driven leaderboard ranks recently published 3D gesture-generation models on the BEAT2 dataset using crowdsourced human evaluation. The leaderboard is maintained by the{' '}
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); onNavigate('AboutUs'); }}
-                className="font-semibold text-brand-primary hover:underline"
-                aria-label="Navigate to about us page"
-              >
-                GENEA research collaboration
-              </a>
-              , with recurring evaluations for new submissions every month. We use a disentangled methodology, rooted in previous{' '}
-              <a 
-                href="https://svito-zar.github.io/GENEAchallenge2023/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="font-semibold text-brand-primary hover:underline"
-              >
-                GENEA challenges
-              </a>
-              , to evaluate generative AI models across two dimensions:
+          <a
+            href={aboutUsPath}
+            onClick={(e) => { e.preventDefault(); onNavigate('AboutUs'); }}
+            className="font-semibold text-brand-primary hover:underline"
+            aria-label="Navigate to about us page"
+          >
+            GENEA research collaboration
+          </a>
+          , with recurring evaluations for new submissions every month. We use a disentangled methodology, rooted in previous{' '}
+          <a
+            href="https://svito-zar.github.io/GENEAchallenge2023/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brand-primary hover:underline"
+          >
+            GENEA challenges
+          </a>
+          , to evaluate generative AI models across two dimensions:
         </p>
       </div>
       <div className="space-y-12">
