@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 const dataReleases = [
   {
@@ -29,6 +30,26 @@ const dataReleases = [
 
 
 const DataReleasePage: React.FC = () => {
+  const bibtex = `@misc{nagy2025gesture,
+      title={Gesture Generation (Still) Needs Improved Human Evaluation Practices: Insights from a Community-Driven State-of-the-Art Benchmark}, 
+      author={Rajmund Nagy and Hendric Voss and Thanh Hoang-Minh and Mihail Tsakov and Teodor Nikolov and Zeyi Zhang and Tenglong Ao and Sicheng Yang and Shaoli Huang and Yongkang Cheng and M. Hamza Mughal and Rishabh Dabral and Kiran Chhatre and Christian Theobalt and Libin Liu and Stefan Kopp and Rachel McDonnell and Michael Neff and Taras Kucherenko and Youngwoo Yoon and Gustav Eje Henter},
+      year={2025},
+      eprint={2511.01233},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.01233}, 
+}`;
+
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(bibtex);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (e) {
+      console.error('Failed to copy BibTeX:', e);
+    }
+  };
   return (
     <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
       <h2 className="text-3xl font-bold text-brand-text mb-4">Data Release</h2>
@@ -92,6 +113,29 @@ const DataReleasePage: React.FC = () => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Citation section */}
+      <br/>
+      <div className="space-y-4 text-brand-text-muted mb-8">
+        <h3 className="text-2xl font-bold text-brand-text mb-2">Citation</h3>
+        <p className="text-sm text-brand-text-muted mb-3">
+          If you use our data, evaluation protocol, or results, please cite the preprint (<a href="https://arxiv.org/abs/2511.01233" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">arXiv link</a>):
+        </p>
+        <div className="relative">
+          <pre className="whitespace-pre-wrap break-words bg-gray-50 text-xs md:text-sm text-brand-text p-4 rounded-lg border border-gray-200 overflow-x-auto">
+{bibtex}
+          </pre>
+          <button
+            type="button"
+            onClick={handleCopy}
+            className="absolute top-2 right-2 px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-primary text-white hover:opacity-90 focus:outline-none"
+            aria-label="Copy BibTeX to clipboard"
+            title="Copy BibTeX"
+          >
+            {copied ? 'Copied' : 'Copy'}
+          </button>
+        </div>
       </div>
     </div>
   );
