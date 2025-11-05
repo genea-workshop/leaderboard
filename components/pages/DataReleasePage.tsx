@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { BASE_PATH } from '../../constants';
 
 const dataReleases = [
   {
     title: 'Evaluation segment timestamps',
-    description: 'Timestamps and text transcripts for the short evaluation segments used in our evaluation, manually selected to be free of major motion-capture artifacts, and to contain full phrases.',
+    description: 'Timestamps for the 108 evaluation segments used in our evaluation, manually selected to be free of major motion-capture artifacts. Each segment is a full phrase with durations ranging between 7.7 and 12 seconds.',
     uses: 'Independent evaluations that benefit from a standardised evaluation set.',
     isReleased: true,
   },
@@ -55,10 +56,10 @@ const DataReleasePage: React.FC = () => {
       <h2 className="text-3xl font-bold text-brand-text mb-4">Data Release</h2>
       <div className="space-y-4 text-brand-text-muted mb-8">
         <p>
-          We believe in transparent and reproducible research. Full details on the metrics, user study design, and data processing are described in our preprint. 
+          We believe in transparent and reproducible research. Full details on the metrics, user study design, and data processing are described in our preprint.
         </p>
         <p>
-        To support open research on gesture generation, we release the following data from the GENEA Leaderboard:
+          To support open research on gesture generation, we release the following data from the GENEA Leaderboard:
         </p>
       </div>
       <div className="overflow-x-auto border border-gray-200 rounded-lg">
@@ -80,7 +81,7 @@ const DataReleasePage: React.FC = () => {
                   <div className="flex items-center mb-2">
                     <p className="text-base font-bold text-brand-text">{item.title}</p>
                     {!item.isReleased && (
-                       <span className="ml-3 text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="ml-3 text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         Coming Soon
                       </span>
                     )}
@@ -88,12 +89,30 @@ const DataReleasePage: React.FC = () => {
                   <p className="text-sm text-brand-text-muted">
                     {item.description}
                   </p>
+                  {item.title === 'Evaluation segment timestamps' && (
+                    <div className="mt-2">
+                      <a
+                        href={`${BASE_PATH}assets/evaluation_segment_timestamps.csv`}
+                        download="evaluation_segment_timestamps.csv"
+                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline"
+                        aria-label="Download CSV file"
+                      >
+                        <span>Download</span>
+                        <span className="ml-2 text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                          CSV
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1.5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
                   {item.title === 'Rendered evaluation videos' && (
                     <div className="mt-2">
-                      <a 
-                        href="https://drive.google.com/drive/folders/1fnCOaUyvpfId6UfF8gVafwoB_fCH_AxK" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href="https://drive.google.com/drive/folders/1fnCOaUyvpfId6UfF8gVafwoB_fCH_AxK"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline"
                         aria-label="View rendered evaluation videos on Google Drive"
                       >
@@ -116,7 +135,7 @@ const DataReleasePage: React.FC = () => {
       </div>
 
       {/* Citation section */}
-      <br/>
+      <br />
       <div className="space-y-4 text-brand-text-muted mb-8">
         <h3 className="text-2xl font-bold text-brand-text mb-2">Citation</h3>
         <p className="text-sm text-brand-text-muted mb-3">
@@ -124,7 +143,7 @@ const DataReleasePage: React.FC = () => {
         </p>
         <div className="relative">
           <pre className="whitespace-pre-wrap break-words bg-gray-50 text-xs md:text-sm text-brand-text p-4 rounded-lg border border-gray-200 overflow-x-auto">
-{bibtex}
+            {bibtex}
           </pre>
           <button
             type="button"
