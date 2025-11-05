@@ -135,24 +135,23 @@ const DataReleasePage: React.FC = () => {
       </div>
 
       {/* Citation section */}
-      <br />
-      <div className="space-y-4 text-brand-text-muted mb-8">
-        <h3 className="text-2xl font-bold text-brand-text mb-2">Citation</h3>
-        <p className="text-sm text-brand-text-muted mb-3">
-          If you use our data, evaluation protocol, or results, please cite the preprint (<a href="https://arxiv.org/abs/2511.01233" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">arXiv link</a>):
+      <div className="mt-12">
+        <h3 className="text-2xl font-bold text-brand-text mb-4">Citation</h3>
+        <p className="mb-4">
+          If you use our data, evaluation protocol, or results, please cite <a href="https://arxiv.org/abs/2511.01233" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-primary hover:underline">our arXiv preprint</a>:
         </p>
         <div className="relative">
-          <pre className="whitespace-pre-wrap break-words bg-gray-50 text-xs md:text-sm text-brand-text p-4 rounded-lg border border-gray-200 overflow-x-auto">
+          <pre className="whitespace-pre-wrap break-words bg-white text-xs md:text-sm text-gray-800 p-4 rounded-md border border-gray-300 overflow-x-auto">
             {bibtex}
           </pre>
           <button
             type="button"
             onClick={handleCopy}
-            className="absolute top-2 right-2 px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-primary text-white hover:opacity-90 focus:outline-none"
+            className="absolute top-3 right-3 px-3 py-1.5 text-xs font-semibold rounded-md bg-brand-primary text-white hover:bg-blue-700 transition-colors focus:outline-none"
             aria-label="Copy BibTeX to clipboard"
             title="Copy BibTeX"
           >
-            {copied ? 'Copied' : 'Copy'}
+            {copied ? 'Copied!' : 'Copy'}
           </button>
         </div>
       </div>
