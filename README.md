@@ -1,5 +1,5 @@
 
-# Setup Instructions
+# Instructions for editing the website
 You can edit the website in two ways: in your browser via Github codespaces, or locally.
 
 ## Local Development
