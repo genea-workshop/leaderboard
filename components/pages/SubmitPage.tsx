@@ -44,7 +44,7 @@ const SubmitPage: React.FC = () => {
             The submissions will be available after <span className="font-bold">17th of November</span>.
           </p>
           <p className="mt-1">
-            Any submissions before the end of November will be evaluated until the <span className="font-bold">5th of December</span>.
+            Any submissions before the end of November will be evaluated until the <span className="font-bold">12th of December</span>.
           </p>
       </div>
 
