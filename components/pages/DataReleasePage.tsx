@@ -20,7 +20,6 @@ const dataReleases = [
     description: 'Test-set motion for the BEAT-2 dataset, as well as 5 hours of generated motion for all evaluated models, in the standardised SMPL-X format.',
     uses: 'Acquiring new visualisations (e.g., on a different character model), or training motion representations with synthetic data. Comparison to the state of the art without having to reproduce baselines.',
     isReleased: false,
-    // releaseInfo: '~ Mid December',
   },
   {
     title: 'Human preference votes',
@@ -51,7 +50,7 @@ const dataReleases = [
 
 const DataReleasePage: React.FC = () => {
   const bibtex = `@misc{nagy2025gesture,
-      title={Gesture Generation (Still) Needs Improved Human Evaluation Practices: Insights from a Community-Driven State-of-the-Art Benchmark}, 
+      title={Towards Reliable Human Evaluations in Gesture Generation: Insights from a Community-Driven State-of-the-Art Benchmark}, 
       author={Rajmund Nagy and Hendric Voss and Thanh Hoang-Minh and Mihail Tsakov and Teodor Nikolov and Zeyi Zhang and Tenglong Ao and Sicheng Yang and Shaoli Huang and Yongkang Cheng and M. Hamza Mughal and Rishabh Dabral and Kiran Chhatre and Christian Theobalt and Libin Liu and Stefan Kopp and Rachel McDonnell and Michael Neff and Taras Kucherenko and Youngwoo Yoon and Gustav Eje Henter},
       year={2025},
       eprint={2511.01233},
@@ -101,7 +100,7 @@ const DataReleasePage: React.FC = () => {
                     <p className="text-base font-bold text-brand-text">{item.title}</p>
                     {!item.isReleased && (
                       <span className="ml-3 text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        {item.releaseInfo ?? 'Coming in Late December'}
+                        Coming in Late December
                       </span>
                     )}
                   </div>

@@ -240,7 +240,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
         <div className="space-y-4">
           <div className="bg-blue-50 border border-blue-200 text-blue-900 px-6 py-4 rounded-lg text-base">
             <p>
-              For more details on our methodology and on the importance of standardised evaluation, please read our new preprint: <a href="https://arxiv.org/abs/2511.01233" className="font-semibold text-brand-primary hover:underline" target="_blank" rel="noopener noreferrer">"Gesture Generation (Still) Needs Improved Human Evaluation Practices: Insights from a Community-Driven State-of-the-Art Benchmark"</a>.
+              For more details on our methodology and on the importance of standardised evaluation, please read our new preprint: <a href="https://arxiv.org/abs/2511.01233" className="font-semibold text-brand-primary hover:underline" target="_blank" rel="noopener noreferrer">"Towards Reliable Human Evaluations in Gesture Generation: Insights from a Community-Driven State-of-the-Art Benchmark"</a>.
             </p>
           </div>
         </div>
