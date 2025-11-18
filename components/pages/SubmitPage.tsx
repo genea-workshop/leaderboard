@@ -28,7 +28,7 @@ const UnorderedListSmall: React.FC<{ items: React.ReactNode[] }> = ({ items }) =
 );
 
 const SubmitPage: React.FC = () => {
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
   const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
 
   return (
@@ -114,7 +114,7 @@ const SubmitPage: React.FC = () => {
       <strong>Contact information</strong>
       <Par>Please contact the organisers at <a href="mailto:genea-leaderboard@googlegroups.com" className="font-semibold text-brand-primary hover:text-brand-secondary">genea-leaderboard@googlegroups.com</a> if you have any questions about these rules.</Par>
       
-      <label className="inline-flex items-center gap-3 cursor-pointer select-none text-brand-text">
+      {/* <label className="inline-flex items-center gap-3 cursor-pointer select-none text-brand-text">
         <input
           type="checkbox"
           className="h-5 w-5 rounded border-gray-300 text-brand-primary focus:ring-brand-secondary"
@@ -122,12 +122,12 @@ const SubmitPage: React.FC = () => {
           onChange={(event) => setShowForm(event.target.checked)}
         />
         <span className="font-semibold">Accept the rules</span>
-      </label>
+      </label> */}
 
       <SectionTitle>Submit your system</SectionTitle>
       <Par>Please fill out the embedded Google Form below to start the submission process. If you cannot see the form, please contact us.</Par>
    
-      {showForm && (
+      {/* {showForm && ( */}
         <div className="rounded-2xl border border-gray-200 shadow-inner overflow-hidden mb-10">
           <iframe
             title="GENEA Leaderboard submission form"
@@ -138,7 +138,7 @@ const SubmitPage: React.FC = () => {
             loading="lazy"
           />
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };
