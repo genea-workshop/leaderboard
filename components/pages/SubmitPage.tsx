@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Reusable components for consistent styling
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -28,7 +28,8 @@ const UnorderedListSmall: React.FC<{ items: React.ReactNode[] }> = ({ items }) =
 );
 
 const SubmitPage: React.FC = () => {
-  // const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
+  const [showForm, setShowForm] = useState(false);
+  const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
 
   return (
     <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
@@ -81,6 +82,7 @@ const SubmitPage: React.FC = () => {
     
       <strong>Retention and distribution of submitted materials</strong>
       <Par>All motion and other materials (e.g., form responses and system-description documents) that you submit to the leaderboard will be retained by the organisers for future use. You retain ownership and still have the right to do whatever you like with your data and your documents.</Par>
+      {/* <div className='bg-gray-200'> */}
       <Par><strong>By submitting motion and other materials to the leaderboard, you agree to the following terms and conditions:</strong></Par>
       <OrderedList
         items={[
@@ -89,6 +91,7 @@ const SubmitPage: React.FC = () => {
           "You agree not to seek indemnity or other recovery from us for any claims, losses, liabilities, costs, or expenses arising out of use of the data consistent with the license granted above. The same applies to third‑party claims related to permitted use of the data, except for claims resulting from gross negligence or willful misconduct on our part.",
         ]}
       />
+      {/* </div> */}
 
       <SectionTitle>How to participate</SectionTitle>
       <strong>Documentation and reproducibility</strong>
@@ -111,18 +114,31 @@ const SubmitPage: React.FC = () => {
       <strong>Contact information</strong>
       <Par>Please contact the organisers at <a href="mailto:genea-leaderboard@googlegroups.com" className="font-semibold text-brand-primary hover:text-brand-secondary">genea-leaderboard@googlegroups.com</a> if you have any questions about these rules.</Par>
       
-      <h2 className="text-3xl font-bold text-brand-text mb-2 mt-10">Submit your system</h2>
-      <Par>Please fill out the embedded Google Form below to start the submission process. If you can't see the form, please contact to us.</Par>
-      {/* <div className="rounded-2xl border border-gray-200 shadow-inner overflow-hidden mb-10">
-        <iframe
-          title="GENEA Leaderboard submission form"
-          src={GOOGLE_FORM_EMBED_URL}
-          className="w-full"
-          height="1200"
-          style={{ border: 0 }}
-          loading="lazy"
+      <label className="inline-flex items-center gap-3 cursor-pointer select-none text-brand-text">
+        <input
+          type="checkbox"
+          className="h-5 w-5 rounded border-gray-300 text-brand-primary focus:ring-brand-secondary"
+          checked={showForm}
+          onChange={(event) => setShowForm(event.target.checked)}
         />
-      </div> */}
+        <span className="font-semibold">Accept the rules</span>
+      </label>
+
+      <SectionTitle>Submit your system</SectionTitle>
+      <Par>Please fill out the embedded Google Form below to start the submission process. If you cannot see the form, please contact us.</Par>
+   
+      {showForm && (
+        <div className="rounded-2xl border border-gray-200 shadow-inner overflow-hidden mb-10">
+          <iframe
+            title="GENEA Leaderboard submission form"
+            src={GOOGLE_FORM_EMBED_URL}
+            className="w-full"
+            height="1200"
+            style={{ border: 0 }}
+            loading="lazy"
+          />
+        </div>
+      )}
     </div>
   );
 };
