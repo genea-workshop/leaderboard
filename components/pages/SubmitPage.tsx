@@ -39,7 +39,7 @@ const SubmitPage: React.FC = () => {
         <p><strong>Please read the rules, before submitting!</strong></p>
         <p>The submission form is at the bottom of the page.</p>
         <p className="mt-4">
-          Any submissions before the end of November will be evaluated until the <strong>12th of December</strong>.
+          If you submit before the end of November and your submission is accepted, it will be evaluated by the <strong>12th of December</strong>.
         </p>
       </div>
 

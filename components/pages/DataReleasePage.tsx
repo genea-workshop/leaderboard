@@ -20,11 +20,30 @@ const dataReleases = [
     description: 'Test-set motion for the BEAT-2 dataset, as well as 5 hours of generated motion for all evaluated models, in the standardised SMPL-X format.',
     uses: 'Acquiring new visualisations (e.g., on a different character model), or training motion representations with synthetic data. Comparison to the state of the art without having to reproduce baselines.',
     isReleased: false,
+    releaseInfo: '~ Mid December',
   },
   {
     title: 'Human preference votes',
     description: 'We will release 16 000 crowdsourced human preference votes collected in our evaluation thus far.',
     uses: 'Developing a new automated metric, or fine-tuning a generative model using, e.g., reinforcement learning from human feedback (RLHF).',
+    isReleased: false,
+  },
+  {
+    title: 'Code for objective evaluations',
+    description: 'Python scripts for calculating objective metrics for model outputs.',
+    uses: 'Calculate objective metrics on the results that your model outputs on the test data we provide. Reproduce what has been computed for the leaderboard.',
+    isReleased: false,
+  },
+  {
+    title: 'Code for conducting a user study',
+    description: 'We will release the code for conducting your own user studies on Prolific.',
+    uses: 'If you wish to fund your own user study to meet an internal deadline versus the evaluation deadlines imposed by the leaderboard.',
+    isReleased: false,
+  },
+  {
+    title: 'Code for calculating Elo and mismatching score from raw user study results',
+    description: 'Code that lets you perform statistical analysis on the subjective results from user studies.',
+    uses: 'Reproduce the subjective analysis that has been performed for the leaderboard evaluations.',
     isReleased: false,
   },
 ];
@@ -82,7 +101,7 @@ const DataReleasePage: React.FC = () => {
                     <p className="text-base font-bold text-brand-text">{item.title}</p>
                     {!item.isReleased && (
                       <span className="ml-3 text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        Coming Soon
+                        {item.releaseInfo ?? 'Coming Soon'}
                       </span>
                     )}
                   </div>
