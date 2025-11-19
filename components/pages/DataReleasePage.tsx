@@ -93,7 +93,7 @@ const DataReleasePage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {dataReleases.map((item) => (
           <div key={item.title} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-start justify-between mb-4">
               <div className="flex items-center">
                 <div className="p-2 bg-brand-bg rounded-lg mr-3">
                   <item.icon className="w-6 h-6 text-brand-primary" />
