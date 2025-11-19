@@ -1,37 +1,45 @@
 import React from 'react';
 import { useState } from 'react';
 import { BASE_PATH } from '../../constants';
+import { Clock, Film, PersonStanding, ThumbsUp, Code, BarChart3 } from 'lucide-react';
 
 const dataReleases = [
   {
     title: 'Evaluation segment timestamps',
+    icon: Clock,
     description: 'Timestamps for the 108 evaluation segments used in our evaluation, manually selected to be free of major motion-capture artifacts. Each segment is a full phrase with durations ranging between 7.7 and 12 seconds.',
     uses: 'Independent evaluations that benefit from a standardised evaluation set.',
     isReleased: true,
   },
   {
     title: 'Rendered evaluation videos',
+    icon: Film,
     description: 'All user-study videos used to in the leaderboard evaluation.',
     uses: 'Independent evaluation of new gesture-generation models, without having to reproduce baselines. Testing the effects of isolated evaluation design choices, or perhaps a completely new methodology.',
     isReleased: true,
   },
   {
     title: 'SMPL-X motion files',
+    icon: PersonStanding,
     description: 'Test-set motion for the BEAT-2 dataset, as well as 5 hours of generated motion for all evaluated models, in the standardised SMPL-X format.',
     uses: 'Acquiring new visualisations (e.g., on a different character model), or training motion representations with synthetic data. Comparison to the state of the art without having to reproduce baselines.',
     isReleased: false,
+    releaseDateText: 'Coming in December',
   },
   {
     title: 'Human preference votes',
+    icon: ThumbsUp,
     description: 'We will release 16 000 crowdsourced human preference votes collected in our evaluation thus far.',
     uses: 'Developing a new automated metric, or fine-tuning a generative model using, e.g., reinforcement learning from human feedback (RLHF).',
     isReleased: false,
+    releaseDateText: 'Coming in 2026',
   },
   {
     title: 'Code for objective evaluations',
+    icon: Code,
     description: 'Python scripts for calculating objective metrics for model outputs.',
     uses: 'Calculate objective metrics on the results that your model outputs on the test data we provide. Reproduce what has been computed for the leaderboard.',
-    isReleased: false,
+    isReleased: true,
   },
   // {
   //   title: 'Code for conducting a user study',
@@ -41,9 +49,11 @@ const dataReleases = [
   // },
   {
     title: 'Code for statistical analysis',
+    icon: BarChart3,
     description: 'Code that lets you perform statistical analysis on the subjective results from user studies in order to obtain Elo and mismatching scores.',
     uses: 'Reproduce the subjective analysis that has been performed for the leaderboard evaluations, or conduct a subjective analysis of your own user study results.',
     isReleased: false,
+    releaseDateText: 'Coming in December',
   },
 ];
 
@@ -80,76 +90,77 @@ const DataReleasePage: React.FC = () => {
           To support open research on gesture generation, we release the following data from the GENEA Leaderboard:
         </p>
       </div>
-      <div className="overflow-x-auto border border-gray-200 rounded-lg">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              <th scope="col" className="w-1/2 px-6 py-4 text-left text-sm font-semibold text-brand-text uppercase tracking-wider">
-                Data Type
-              </th>
-              <th scope="col" className="w-1/2 px-6 py-4 text-left text-sm font-semibold text-brand-text uppercase tracking-wider">
-                Example Uses
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {dataReleases.map((item) => (
-              <tr key={item.title}>
-                <td className="px-6 py-4 align-top">
-                  <div className="flex items-center mb-2">
-                    <p className="text-base font-bold text-brand-text">{item.title}</p>
-                    {!item.isReleased && (
-                      <span className="ml-3 text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        Coming in Late December
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-sm text-brand-text-muted">
-                    {item.description}
-                  </p>
-                  {item.title === 'Evaluation segment timestamps' && (
-                    <div className="mt-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {dataReleases.map((item) => (
+          <div key={item.title} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center">
+                <div className="p-2 bg-brand-bg rounded-lg mr-3">
+                  <item.icon className="w-6 h-6 text-brand-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-brand-text">{item.title}</h3>
+              </div>
+
+              {/* Action/Status Area */}
+              <div>
+                {!item.isReleased ? (
+                  <span className="text-xs font-semibold text-gray-600 bg-gray-200 px-2.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-2">
+                    {item.releaseDateText || 'Coming in December'}
+                  </span>
+                ) : (
+                  <>
+                    {item.title === 'Evaluation segment timestamps' && (
                       <a
                         href={`${BASE_PATH}assets/evaluation_segment_timestamps.csv`}
                         download="evaluation_segment_timestamps.csv"
-                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline"
+                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline whitespace-nowrap ml-2"
                         aria-label="Download CSV file"
                       >
-                        <span>Download</span>
-                        <span className="ml-2 text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full uppercase tracking-wider">
-                          CSV
-                        </span>
+                        <span>Download CSV</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1.5" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
                       </a>
-                    </div>
-                  )}
-                  {item.title === 'Rendered evaluation videos' && (
-                    <div className="mt-2">
+                    )}
+                    {item.title === 'Rendered evaluation videos' && (
                       <a
                         href="https://drive.google.com/drive/folders/1fnCOaUyvpfId6UfF8gVafwoB_fCH_AxK"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline"
+                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline whitespace-nowrap ml-2"
                         aria-label="View rendered evaluation videos on Google Drive"
                       >
-                        <span>View on Google Drive</span>
+                        <span>View on Drive</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                           <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                         </svg>
                       </a>
-                    </div>
-                  )}
-                </td>
-                <td className="px-6 py-4 align-top text-sm text-brand-text-muted leading-relaxed">
-                  {item.uses}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                    )}
+                    {item.title === 'Code for objective evaluations' && (
+                      <a
+                        href="https://github.com/GENEALeaderboard/objective_metric"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline whitespace-nowrap ml-2"
+                        aria-label="View objective metric code on GitHub"
+                      >
+                        <span>View on GitHub</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
+                        </svg>
+                      </a>
+                    )}
+                  </>
+                )}
+              </div>
+            </div>
+
+            <p className="text-brand-text-muted mb-4 flex-grow">
+              {item.description}
+            </p>
+          </div>
+        ))}
       </div>
 
       {/* Citation section */}
