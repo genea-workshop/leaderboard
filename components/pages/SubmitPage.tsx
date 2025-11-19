@@ -14,7 +14,7 @@ import {
 
 // Reusable components for consistent styling
 const SectionTitle: React.FC<{ children: React.ReactNode; icon?: React.ReactNode }> = ({ children, icon }) => (
-  <div className="flex items-center gap-3 mt-10 mb-6 pb-2 border-b border-gray-100">
+  <div className="flex items-center gap-3 mt-10 mb-6 pb-2 border-b border-gray-200">
     {icon && <span className="text-brand-primary">{icon}</span>}
     <h3 className="text-2xl font-bold text-brand-text">{children}</h3>
   </div>
@@ -62,9 +62,9 @@ const SubmitPage: React.FC = () => {
   const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
+    <div className="mx-auto space-y-8">
       {/* Header Section */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
         <div className="flex items-center gap-4 mb-6">
           <div className="p-3 bg-brand-primary/10 rounded-xl">
             <Send className="w-8 h-8 text-brand-primary" />
@@ -85,7 +85,7 @@ const SubmitPage: React.FC = () => {
       </div>
 
       {/* Rules Section */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
         <div className="flex items-center gap-3 mb-6">
           <BookOpen className="w-6 h-6 text-brand-text" />
           <h2 className="text-3xl font-bold text-brand-text">Rules</h2>
@@ -102,7 +102,7 @@ const SubmitPage: React.FC = () => {
         <SectionTitle icon={<Database className="w-6 h-6" />}>Data and materials</SectionTitle>
         <h4 className="text-lg font-bold text-brand-text mb-3">Training data and pre-trained models</h4>
         <Par>To ensure reproducibility and a level playing field, you may only use data and pre-trained model weights that are open and non-proprietary (or that will become open and non-proprietary upon publication) to create submissions to the leaderboard. For this leaderboard, open and non-proprietary means:</Par>
-        <div className="bg-gray-50 p-6 rounded-xl mb-6 border border-gray-100">
+        <div className="bg-gray-100 p-6 rounded-xl mb-6 border border-gray-200">
           <CheckList
             items={[
               "Publicly available and findable.",
@@ -144,7 +144,7 @@ const SubmitPage: React.FC = () => {
         <h4 className="text-lg font-bold text-brand-text mt-8 mb-3">Retention and distribution of submitted materials</h4>
         <Par>All motion and other materials (e.g., form responses and system-description documents) that you submit to the leaderboard will be retained by the organisers for future use. You retain ownership and still have the right to do whatever you like with your data and your documents.</Par>
 
-        <div className="bg-brand-surface-2 p-6 rounded-xl border border-gray-200 mt-6">
+        <div className="bg-gray-100 p-6 rounded-xl border border-gray-200 mt-6">
           <Par><strong>By submitting motion and other materials to the leaderboard, you agree to the following terms and conditions:</strong></Par>
           <OrderedList
             items={[
@@ -179,7 +179,7 @@ const SubmitPage: React.FC = () => {
       </div>
 
       {/* Submission Form Section */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+      <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
         <div className="flex items-center gap-3 mb-6">
           <FileText className="w-6 h-6 text-brand-text" />
           <h2 className="text-3xl font-bold text-brand-text">Submit your system</h2>
