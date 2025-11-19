@@ -21,7 +21,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode; icon?: React.ReactNode
 );
 
 const Par: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <p className="text-brand-text-muted leading-relaxed mb-4 text-justify text-lg">{children}</p>
+  <p className="text-brand-text-muted leading-relaxed mb-4 text-justify">{children}</p>
 );
 
 const OrderedList: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
