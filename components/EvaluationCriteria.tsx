@@ -115,7 +115,7 @@ const EvaluationCriteria: React.FC = () => {
             <div>
               <h4 className="font-semibold text-brand-text text-sm uppercase tracking-wider">Example</h4>
               <p className="text-brand-text-muted leading-relaxed text-sm mt-1">
-              A score of 0% means the random speech sample is picked equally often as the correct speech.
+              A score of 50% means the random speech sample is picked equally often as the correct speech.
               A score of 100% means the correct speech is always identified.
               </p>
             </div>
