@@ -77,9 +77,9 @@ const SubmitPage: React.FC = () => {
           <div className="space-y-2">
             <p className="font-semibold text-lg">Please read the rules before submitting!</p>
             <p>The submission form is at the bottom of the page.</p>
-            <p className="text-blue-800">
+            {/* <p className="text-blue-800">
               If you submit before the end of November and your submission is accepted, it will be evaluated by the <strong>12th of December</strong>.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
