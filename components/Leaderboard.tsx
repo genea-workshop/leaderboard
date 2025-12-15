@@ -33,6 +33,7 @@ const LeaderboardTable: React.FC<{
           <tr>
             <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-brand-text sm:pl-6">Rank</th>
             <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-brand-text">Model</th>
+            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-brand-text">Dataset</th>
             <th scope="col" className={`px-3 py-3.5 text-left text-sm transition-colors ${sortConfig.key === 'motionRealismElo' ? 'bg-blue-50' : ''}`}>
               <button
                 type="button"
@@ -80,8 +81,8 @@ const LeaderboardTable: React.FC<{
                       href={entry.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-brand-primary hover:underline inline-flex items-center mt-1"
-                      aria-label={`Project page for ${entry.modelName}`}
+                        className="text-xs text-brand-primary hover:underline inline-flex items-center mt-1"
+                        aria-label={`Project page for ${entry.modelName}`}
                     >
                       <span>Project Page</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
@@ -90,6 +91,27 @@ const LeaderboardTable: React.FC<{
                       </svg>
                     </a>
                   )}
+                  {entry.modelName === 'Seamless' && entry.systemDetailsUrl && (
+                    <a
+                      href={entry.systemDetailsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-brand-primary hover:underline inline-flex items-center mt-1 ml-3"
+                      aria-label={`System details for ${entry.modelName}`}
+                    >
+                      <span>System Details</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                      </svg>
+                    </a>
+                  )}
+                </td>
+                <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text-muted">
+                  <div>
+                    <span className="font-medium">{entry.modelName === 'Seamless' ? 'Seamless Interaction' : 'BEAT2'}</span>
+                    <div className="text-xs text-brand-text-muted mt-1">{entry.trainingHours != null ? `${entry.trainingHours} hours` : '—'}</div>
+                  </div>
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text-muted">
                   <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-primary'} font-medium`}>{entry.motionRealismElo}</span>
