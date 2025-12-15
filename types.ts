@@ -6,6 +6,8 @@ export interface LeaderboardEntry {
   speechGestureAlignmentPercentage: number;
   speechGestureAlignmentPercentageCI: [number, number];
   websiteUrl?: string;
+  systemDetailsUrl?: string;
+  trainingHours?: number;
   venue?: string;
   year?: number;
 }

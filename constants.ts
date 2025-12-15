@@ -13,9 +13,21 @@ const modelWebsites: { [key: string]: string } = {
   'Semantic Gesticulator': 'https://pku-mocca.github.io/Semantic-Gesticulator-Page/',
   'AMUSE': 'https://amuse.is.tue.mpg.de/',
   'DiffuseStyleGesture': 'https://github.com/YoungSeng/DiffuseStyleGesture',
+  'Seamless': 'https://ai.meta.com/research/seamless-interaction/'
 };
 
 export const LEADERBOARD_DATA: LeaderboardEntry[] = [
+  {
+    rank: 0,
+    modelName: 'Seamless',
+    motionRealismElo: 1133,
+    motionRealismEloCI: [1111, 1155],
+    speechGestureAlignmentPercentage: 73.7,
+    speechGestureAlignmentPercentageCI: [71, 76],
+    websiteUrl: modelWebsites['Seamless'],
+    systemDetailsUrl: 'TODO',
+    trainingHours: 3950,
+  },
   {
     rank: 1,
     modelName: 'Motion capture',
@@ -24,6 +36,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 73.7,
     speechGestureAlignmentPercentageCI: [71, 76],
     websiteUrl: modelWebsites['Motion capture'],
+    // reference data; not a trained model
   },
   {
     rank: 2,
@@ -33,6 +46,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 49.7,
     speechGestureAlignmentPercentageCI: [47, 52],
     websiteUrl: modelWebsites['ConvoFusion'],
+    trainingHours: 25,
     venue: 'CVPR',
     year: 2024,
   },
@@ -44,6 +58,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 48.9,
     speechGestureAlignmentPercentageCI: [46, 52],
     websiteUrl: modelWebsites['RAG-Gesture'],
+    trainingHours: 25,
     venue: 'CVPR',
     year: 2025,
   },
@@ -55,6 +70,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 59.7,
     speechGestureAlignmentPercentageCI: [57, 62],
     websiteUrl: modelWebsites['HoloGest'],
+    trainingHours: 25,
     venue: '3DV',
     year: 2025,
   },
@@ -66,6 +82,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 56.6,
     speechGestureAlignmentPercentageCI: [54, 59],
     websiteUrl: modelWebsites['Semantic Gesticulator'],
+    trainingHours: 25,
     venue: 'SIGGRAPH',
     year: 2024,
   },
@@ -77,6 +94,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 52.2,
     speechGestureAlignmentPercentageCI: [49, 55],
     websiteUrl: modelWebsites['AMUSE'],
+    trainingHours: 25,
     venue: 'CVPR',
     year: 2024,
   },
@@ -88,6 +106,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 60.3,
     speechGestureAlignmentPercentageCI: [58, 63],
     websiteUrl: modelWebsites['DiffuseStyleGesture'],
+    trainingHours: 25,
     venue: 'IJCAI',
     year: 2023,
   },
