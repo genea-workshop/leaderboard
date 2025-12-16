@@ -43,6 +43,12 @@ const CustomizedLabel: React.FC<any> = (props) => {
     case 'ConvoFusion':
       dy = -10;
       break;
+    case 'Seamless':
+      dy = -10;
+      break;
+    case 'Motion capture':
+      dy = 30;
+      break;
   }
 
   return (

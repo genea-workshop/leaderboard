@@ -104,7 +104,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     motionRealismElo: 684,
     motionRealismEloCI: [641, 723],
     speechGestureAlignmentPercentage: 60.9,
-    speechGestureAlignmentPercentageCI: [57.3, 62.6],
+    speechGestureAlignmentPercentageCI: [58.1, 63.7],
     websiteUrl: modelWebsites['DiffuseStyleGesture'],
     trainingHours: 25,
     venue: 'IJCAI',
