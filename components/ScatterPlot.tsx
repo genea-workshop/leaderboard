@@ -60,10 +60,10 @@ const CustomizedDot: React.FC<any> = (props) => {
   if (cx === null || cy === null || !payload) {
     return null;
   }
-  
+
   const isMotionCapture = payload.modelName === 'Motion capture';
   const dotFillColor = isMotionCapture ? '#f59e0b' : '#2563EB';
-  
+
   return (
     <circle cx={cx} cy={cy} r={4} fill={dotFillColor} stroke="#fff" strokeWidth={1.5} />
   );
@@ -71,7 +71,7 @@ const CustomizedDot: React.FC<any> = (props) => {
 
 
 const ScatterPlot: React.FC<ScatterPlotProps> = ({ data, showCI }) => {
-  const eloDomain = [650, 1200];
+  const eloDomain = [635, 1200];
   const alignmentDomain = [35, 80];
 
   // Pre-process data to provide asymmetric error values, which is more robust.
@@ -122,12 +122,12 @@ const ScatterPlot: React.FC<ScatterPlotProps> = ({ data, showCI }) => {
             yAxisId="alignmentAxis"
             allowDataOverflow={true}
           >
-             <Label value="Speech-Gesture Alignment (%)" angle={-90} offset={-10} position="insideLeft" style={{ textAnchor: 'middle', fill: '#111827' }} />
+            <Label value="Speech-Gesture Alignment (%)" angle={-90} offset={-10} position="insideLeft" style={{ textAnchor: 'middle', fill: '#111827' }} />
           </YAxis>
-          
-          <Scatter 
-            name="Models" 
-            data={processedData} 
+
+          <Scatter
+            name="Models"
+            data={processedData}
             shape={<CustomizedDot />}
             isAnimationActive={false}
             xAxisId="motionRealismAxis"
@@ -136,17 +136,17 @@ const ScatterPlot: React.FC<ScatterPlotProps> = ({ data, showCI }) => {
             <LabelList dataKey="modelName" content={<CustomizedLabel />} />
             {showCI && (
               <>
-                <ErrorBar 
-                  dataKey="motionRealismEloError" 
-                  direction="x" 
-                  strokeWidth={1.5} 
+                <ErrorBar
+                  dataKey="motionRealismEloError"
+                  direction="x"
+                  strokeWidth={1.5}
                   stroke="#9CA3AF"
                   width={4}
                 />
-                <ErrorBar 
-                  dataKey="speechGestureAlignmentPercentageError" 
-                  direction="y" 
-                  strokeWidth={1.5} 
+                <ErrorBar
+                  dataKey="speechGestureAlignmentPercentageError"
+                  direction="y"
+                  strokeWidth={1.5}
                   stroke="#9CA3AF"
                   width={4}
                 />
