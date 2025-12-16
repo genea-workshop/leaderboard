@@ -207,7 +207,7 @@ interface LeaderboardProps {
 
 const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
   const [evaluationType, setEvaluationType] = React.useState<'human' | 'automated'>('human');
-  const [humanSortConfig, setHumanSortConfig] = React.useState<SortConfig>({ key: 'motionRealismElo', direction: 'descending' });
+  const [humanSortConfig, setHumanSortConfig] = React.useState<SortConfig>({ key: 'combinedRank', direction: 'descending' });
   const [automatedSortConfig, setAutomatedSortConfig] = React.useState<AutomatedSortConfig>({ key: 'fgd', direction: 'ascending' });
   const [showCI, setShowCI] = React.useState(true);
 
