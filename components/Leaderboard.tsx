@@ -72,15 +72,17 @@ const LeaderboardTable: React.FC<{
         <tbody className="divide-y divide-gray-200 bg-brand-surface">
           {data.map((entry, index) => {
             const isMotionCapture = entry.modelName === 'Motion capture';
-            const eloRank = data.filter(e => e.motionRealismElo > entry.motionRealismElo).length + 1;
-            const alignmentRank = data.filter(e => e.speechGestureAlignmentPercentage > entry.speechGestureAlignmentPercentage).length + 1;
+            const eloRank = data.filter(e => e.modelName !== 'Motion capture' && e.motionRealismElo > entry.motionRealismElo).length + 1;
+            const alignmentRank = data.filter(e => e.modelName !== 'Motion capture' && e.speechGestureAlignmentPercentage > entry.speechGestureAlignmentPercentage).length + 1;
             const combinedScoreAvg = (eloRank + alignmentRank) / 2;
 
             // Calculate combined rank position (1st, 2nd, 3rd, etc.)
             let combinedRankPosition = 1;
             for (const other of data) {
-              const otherEloRank = data.filter(e => e.motionRealismElo > other.motionRealismElo).length + 1;
-              const otherAlignmentRank = data.filter(e => e.speechGestureAlignmentPercentage > other.speechGestureAlignmentPercentage).length + 1;
+              if (other.modelName === 'Motion capture') continue;
+
+              const otherEloRank = data.filter(e => e.modelName !== 'Motion capture' && e.motionRealismElo > other.motionRealismElo).length + 1;
+              const otherAlignmentRank = data.filter(e => e.modelName !== 'Motion capture' && e.speechGestureAlignmentPercentage > other.speechGestureAlignmentPercentage).length + 1;
               const otherCombinedScoreAvg = (otherEloRank + otherAlignmentRank) / 2;
 
               if (otherCombinedScoreAvg < combinedScoreAvg ||
@@ -221,12 +223,12 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
     if (humanSortConfig) {
       sortableItems.sort((a, b) => {
         if (humanSortConfig.key === 'combinedRank') {
-          const eloRankA = LEADERBOARD_DATA.filter(e => e.motionRealismElo > a.motionRealismElo).length + 1;
-          const alignmentRankA = LEADERBOARD_DATA.filter(e => e.speechGestureAlignmentPercentage > a.speechGestureAlignmentPercentage).length + 1;
+          const eloRankA = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.motionRealismElo > a.motionRealismElo).length + 1;
+          const alignmentRankA = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.speechGestureAlignmentPercentage > a.speechGestureAlignmentPercentage).length + 1;
           const combinedScoreAvgA = (eloRankA + alignmentRankA) / 2;
 
-          const eloRankB = LEADERBOARD_DATA.filter(e => e.motionRealismElo > b.motionRealismElo).length + 1;
-          const alignmentRankB = LEADERBOARD_DATA.filter(e => e.speechGestureAlignmentPercentage > b.speechGestureAlignmentPercentage).length + 1;
+          const eloRankB = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.motionRealismElo > b.motionRealismElo).length + 1;
+          const alignmentRankB = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.speechGestureAlignmentPercentage > b.speechGestureAlignmentPercentage).length + 1;
           const combinedScoreAvgB = (eloRankB + alignmentRankB) / 2;
 
           // Sort by combined score average, with speech-gesture alignment as tiebreaker
