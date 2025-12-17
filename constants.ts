@@ -123,6 +123,15 @@ export const AUTOMATED_EVALUATION_DATA: AutomatedEvaluationEntry[] = [
     websiteUrl: modelWebsites['Motion capture'],
   },
   {
+    modelName: 'Seamless',
+    fgd: 4.743,
+    ba: 0.626,
+    srgr: 0.348,
+    divPose: 6.908,
+    divSample: 0.022,
+    websiteUrl: modelWebsites['Seamless'],
+  },
+  {
     modelName: 'HoloGest',
     fgd: 0.625,
     ba: 0.539,
