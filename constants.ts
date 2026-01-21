@@ -12,9 +12,18 @@ const modelWebsites: { [key: string]: string } = {
   'HoloGest': 'https://cyk990422.github.io/HoloGest.github.io/',
   'Semantic Gesticulator': 'https://pku-mocca.github.io/Semantic-Gesticulator-Page/',
   'AMUSE': 'https://amuse.is.tue.mpg.de/',
-  'DiffuseStyleGesture': 'https://github.com/YoungSeng/DiffuseStyleGesture',
   'Seamless': 'https://ai.meta.com/research/seamless-interaction/'
 };
+
+const modelCodeRepos: { [key: string]: string } = {
+  'Semantic Gesticulator': 'https://github.com/LuMen-ze/Semantic-Gesticulator-Official',
+  'ConvoFusion': 'https://github.com/m-hamza-mughal/convofusion',
+  'DiffuseStyleGesture': 'https://github.com/YoungSeng/DiffuseStyleGesture',
+  'RAG-Gesture': 'https://github.com/m-hamza-mughal/RAG-Gesture',
+  'AMUSE': 'https://github.com/kiranchhatre/amuse'
+};
+
+export { modelCodeRepos };
 
 export const LEADERBOARD_DATA: LeaderboardEntry[] = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LEADERBOARD_DATA, AUTOMATED_EVALUATION_DATA, BASE_PATH } from '../constants';
+import { LEADERBOARD_DATA, AUTOMATED_EVALUATION_DATA, BASE_PATH, modelCodeRepos } from '../constants';
 import ScatterPlot from './ScatterPlot';
 import { LeaderboardEntry } from '../types';
 import EvaluationCriteria from './EvaluationCriteria';
@@ -96,10 +96,10 @@ const LeaderboardTable: React.FC<{
                 key={entry.modelName}
                 className={isMotionCapture ? "bg-amber-50/60" : "hover:bg-gray-50 transition-colors duration-200"}
               >
-                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-brand-text sm:pl-6 text-center">
+                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-lg font-bold text-black sm:pl-6 text-center">
                   {isMotionCapture
                     ? <svg aria-label="Reference performance" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-amber-500 mx-auto" viewBox="0 0 20 20" fill="currentColor"><title>Reference</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    : <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-primary'} font-medium`}>{combinedRankPosition}</span>
+                    : <span className={`${isMotionCapture ? 'text-amber-900' : 'text-black'} font-bold`}>{combinedRankPosition}</span>
                   }
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text">
@@ -108,19 +108,33 @@ const LeaderboardTable: React.FC<{
                     {entry.venue && entry.year && <span className="ml-2 text-xs text-brand-text-muted">[{entry.venue} {entry.year}]</span>}
                     {isMotionCapture && <span className="ml-2 text-xs font-medium text-amber-800 bg-amber-200 px-2 py-0.5 rounded-full align-middle">REFERENCE</span>}
                   </div>
+                  {modelCodeRepos[entry.modelName] && (
+                    <a
+                      href={modelCodeRepos[entry.modelName]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-black hover:text-white bg-white hover:bg-black border border-black rounded-md px-2 py-1 inline-flex items-center mt-1 mr-2 transition-colors"
+                      aria-label={`Code repository for ${entry.modelName}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.25-.6-.86-1.23-.85-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.39.55 1.04 1.73 1.04 1.48 0 2.14-.91 2.24-1.41.22-1.18 1.63-1.12 1.63-1.12 0 .27.01 1.65.01 1.9 0 .21-.15.46-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" />
+                      </svg>
+                      <span>Code</span>
+                    </a>
+                  )}
                   {entry.websiteUrl && (
                     <a
                       href={entry.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-brand-primary hover:underline inline-flex items-center mt-1"
+                      className="text-xs text-black hover:text-white bg-white hover:bg-black border border-black rounded-md px-2 py-1 inline-flex items-center mt-1 mr-2 transition-colors"
                       aria-label={`Project page for ${entry.modelName}`}
                     >
-                      <span>Project Page</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                         <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                       </svg>
+                      <span>Project</span>
                     </a>
                   )}
                   {entry.modelName === 'Seamless' && entry.systemDetailsUrl && (
@@ -128,14 +142,14 @@ const LeaderboardTable: React.FC<{
                       href={entry.systemDetailsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-brand-primary hover:underline inline-flex items-center mt-1 ml-3"
+                      className="text-xs text-black hover:text-white bg-white hover:bg-black border border-black rounded-md px-2 py-1 inline-flex items-center mt-1 transition-colors"
                       aria-label={`System details for ${entry.modelName}`}
                     >
-                      <span>System Details</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                         <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                       </svg>
+                      <span>System Details</span>
                     </a>
                   )}
                 </td>
@@ -174,11 +188,11 @@ const LeaderboardTable: React.FC<{
                   </div>
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text-muted">
-                  <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-primary'} font-medium`}>{entry.motionRealismElo}</span>
+                  <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-text-muted'} font-medium`}>{entry.motionRealismElo}</span>
                   <span className="ml-2 text-xs text-gray-400">[{entry.motionRealismEloCI[0]} - {entry.motionRealismEloCI[1]}]</span>
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-brand-text-muted">
-                  <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-secondary'} font-medium`}>{entry.speechGestureAlignmentPercentage.toFixed(1)}%</span>
+                  <span className={`${isMotionCapture ? 'text-amber-900' : 'text-brand-text-muted'} font-medium`}>{entry.speechGestureAlignmentPercentage.toFixed(1)}%</span>
                   <span className="ml-2 text-xs text-gray-400">[{entry.speechGestureAlignmentPercentageCI[0].toFixed(1)}% - {entry.speechGestureAlignmentPercentageCI[1].toFixed(1)}%]</span>
                 </td>
               </tr>
