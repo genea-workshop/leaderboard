@@ -34,7 +34,7 @@ export const LEADERBOARD_DATA: LeaderboardEntry[] = [
     speechGestureAlignmentPercentage: 75.1,
     speechGestureAlignmentPercentageCI: [71.4, 78.7],
     websiteUrl: modelWebsites['Seamless'],
-    systemDetailsUrl: 'TODO',
+    systemDetailsUrl: '/leaderboard/seamless_description.pdf',
     trainingHours: 3950,
   },
   {
