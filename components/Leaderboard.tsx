@@ -222,6 +222,10 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
     let sortableItems = LEADERBOARD_DATA;
     if (humanSortConfig) {
       sortableItems.sort((a, b) => {
+        // Always keep Motion Capture at the top
+        if (a.modelName === 'Motion capture' && b.modelName !== 'Motion capture') return -1;
+        if (a.modelName !== 'Motion capture' && b.modelName === 'Motion capture') return 1;
+        
         if (humanSortConfig.key === 'combinedRank') {
           const eloRankA = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.motionRealismElo > a.motionRealismElo).length + 1;
           const alignmentRankA = LEADERBOARD_DATA.filter(e => e.modelName !== 'Motion capture' && e.speechGestureAlignmentPercentage > a.speechGestureAlignmentPercentage).length + 1;
@@ -257,6 +261,10 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
 
     if (automatedSortConfig) {
       sortableItems.sort((a, b) => {
+        // Always keep Motion Capture at the top
+        if (a.modelName === 'Motion capture' && b.modelName !== 'Motion capture') return -1;
+        if (a.modelName !== 'Motion capture' && b.modelName === 'Motion capture') return 1;
+        
         if (automatedSortConfig.key === 'ba') {
           return a.ba - b.ba;
         }
