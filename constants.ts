@@ -16,11 +16,12 @@ const modelWebsites: { [key: string]: string } = {
 };
 
 const modelCodeRepos: { [key: string]: string } = {
-  'Semantic Gesticulator': 'https://github.com/LuMen-ze/Semantic-Gesticulator-Official',
   'ConvoFusion': 'https://github.com/m-hamza-mughal/convofusion',
-  'DiffuseStyleGesture': 'https://github.com/YoungSeng/DiffuseStyleGesture',
   'RAG-Gesture': 'https://github.com/m-hamza-mughal/RAG-Gesture',
-  'AMUSE': 'https://github.com/kiranchhatre/amuse'
+  'HoloGest': 'https://github.com/whuhxb/Efficient-Audio-Gesture',
+  'Semantic Gesticulator': 'https://github.com/LuMen-ze/Semantic-Gesticulator-Official',
+  'AMUSE': 'https://github.com/kiranchhatre/amuse',
+  'DiffuseStyleGesture': 'https://github.com/YoungSeng/DiffuseStyleGesture'
 };
 
 export { modelCodeRepos };
