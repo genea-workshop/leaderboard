@@ -78,7 +78,7 @@ const SubmitPage: React.FC = () => {
             <p className="font-semibold text-lg">Please read the rules before submitting!</p>
             <p>The submission form is at the bottom of the page.</p>
             <p className="text-blue-800">
-              The next submission deadline has been extended by <strong>1 week</strong> to <strong>6th of February</strong>. The evaluation results will be published on the <strong>20th of February</strong>.
+              The next submission deadline is the <strong>28th of February</strong>. The evaluation results will be published on the <strong>13th of March</strong>.
             </p>
           </div>
         </div>
