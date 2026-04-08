@@ -23,8 +23,7 @@ const dataReleases = [
     icon: PersonStanding,
     description: 'Test-set motion for the BEAT-2 dataset, as well as 5 hours of generated motion for all evaluated models, in the standardised SMPL-X format.',
     uses: 'Acquiring new visualisations (e.g., on a different character model), or training motion representations with synthetic data. Comparison to the state of the art without having to reproduce baselines.',
-    isReleased: false,
-    releaseDateText: 'Coming in December',
+    isReleased: true,
   },
   {
     title: 'Human preference votes',
@@ -128,6 +127,21 @@ const DataReleasePage: React.FC = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline whitespace-nowrap ml-2"
                         aria-label="View rendered evaluation videos on Google Drive"
+                      >
+                        <span>View on Drive</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                        </svg>
+                      </a>
+                    )}
+                    {item.title === 'SMPL-X motion files' && (
+                      <a
+                        href="https://drive.google.com/drive/folders/1VWdsbYTGt2CsDp6Wg1aJ6gowby6s60Dw"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm font-semibold text-brand-primary hover:underline whitespace-nowrap ml-2"
+                        aria-label="View SMPL-X motion files on Google Drive"
                       >
                         <span>View on Drive</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
