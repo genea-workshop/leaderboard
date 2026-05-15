@@ -320,6 +320,27 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ onNavigate }) => {
 
   return (
     <>
+      <div className="mb-8 max-w-4xl mx-auto">
+        <div className="relative bg-gradient-to-r from-amber-100 to-amber-50 border-2 border-amber-400 text-amber-900 px-6 py-5 rounded-xl shadow-md">
+          <div className="flex items-start gap-3">
+            <span className="inline-flex items-center justify-center flex-shrink-0 px-3 py-1 text-xs font-extrabold tracking-wider text-white bg-amber-500 rounded-full uppercase shadow-sm">
+              News
+            </span>
+            <p className="text-base leading-relaxed">
+              We are hosting a <span className="font-bold">GENEA Gesture-Generation Challenge at ECCV 2026</span>, with a submission deadline on <span className="font-bold">June 28</span>! Please visit{' '}
+              <a
+                href="https://genea-workshop.github.io/2026/challenge/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-brand-primary underline hover:no-underline"
+              >
+                this link
+              </a>{' '}
+              for details.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="mb-12">
         <p className="text-lg text-brand-text-muted max-w-4xl mx-auto text-justify">
           <span className="font-bold text-brand-text">Overview:</span> This community-driven leaderboard ranks recently published 3D gesture-generation models on the BEAT2 dataset using crowdsourced human evaluation. The leaderboard is maintained by the{' '}
