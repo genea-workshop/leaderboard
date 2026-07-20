@@ -3,18 +3,20 @@ import Header from './components/Header';
 import Leaderboard from './components/Leaderboard';
 import Footer from './components/Footer';
 import DataReleasePage from './components/pages/DataReleasePage';
-import SubmitPage from './components/pages/SubmitPage';
+import SubmitBEAT2Page from './components/pages/SubmitBEAT2Page';
+import SubmitSeamlessPage from './components/pages/SubmitSeamlessPage';
 import AboutUsPage from './components/pages/AboutUsPage';
 import ToolingPage from './components/pages/ToolingPage';
 import { BASE_PATH } from './constants';
 
-export type Page = 'Leaderboard' | 'DataRelease' | 'Tooling' | 'Submit' | 'AboutUs';
+export type Page = 'Leaderboard' | 'DataRelease' | 'Tooling' | 'SubmitBEAT2' | 'SubmitSeamless' | 'AboutUs';
 
 const pageToSlug: Record<Page, string> = {
   Leaderboard: '',
   DataRelease: 'data-release',
   Tooling: 'tooling',
-  Submit: 'submit',
+  SubmitBEAT2: 'submit-beat2',
+  SubmitSeamless: 'submit-seamless',
   AboutUs: 'about-us',
 };
 
@@ -26,7 +28,7 @@ const getPageFromPath = (path: string): Page => {
   if (relativePath.length > 0 && relativePath.endsWith('/')) {
     relativePath = relativePath.slice(0, -1);
   }
-  return slugToPage[relativePath] || 'Leaderboard';
+  return slugToPage[relativePath] || 'Beat2Leaderboard';
 };
 
 const App: React.FC = () => {
@@ -64,8 +66,10 @@ const App: React.FC = () => {
         return <DataReleasePage />;
       case 'Tooling':
         return <ToolingPage />;
-      case 'Submit':
-        return <SubmitPage />;
+      case 'SubmitBEAT2':
+        return <SubmitBEAT2Page />;
+      case 'SubmitSeamless':
+        return <SubmitSeamlessPage />;
       case 'AboutUs':
         return <AboutUsPage />;
       default:

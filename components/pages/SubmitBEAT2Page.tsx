@@ -57,7 +57,7 @@ const CheckList: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
   </ul>
 );
 
-const SubmitPage: React.FC = () => {
+const SubmitBEAT2Page: React.FC = () => {
   // const [showForm, setShowForm] = useState(false);
   const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
 
@@ -86,9 +86,12 @@ const SubmitPage: React.FC = () => {
 
       {/* Rules Section */}
       <div className="bg-brand-surface p-8 rounded-2xl shadow-lg border border-gray-200">
-        <div className="flex items-center gap-3 mb-6">
-          <BookOpen className="w-6 h-6 text-brand-text" />
-          <h2 className="text-3xl font-bold text-brand-text">Rules</h2>
+        
+        <div className="flex items-center gap-4 mb-6">
+          <div className="p-3 bg-brand-primary/10 rounded-xl">
+            <Shield className="w-8 h-8 text-brand-primary" />
+          </div>
+          <h2 className="text-3xl font-bold text-brand-text">Rules of the BEAT2 Leaderboard</h2>
         </div>
 
         <div className="prose prose-lg max-w-none text-brand-text-muted">
@@ -201,4 +204,4 @@ const SubmitPage: React.FC = () => {
   );
 };
 
-export default SubmitPage;
+export default SubmitBEAT2Page;
