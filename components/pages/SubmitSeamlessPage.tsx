@@ -150,6 +150,7 @@ const SubmitSeamlessPage: React.FC = () => {
         <Par>Systems that require a motion input at synthesis time to produce output motion, such as few-shot systems with motion "prompting", or variational autoencoders, may only use training data as synthesis-time input.</Par>
         <Par>Since the idea is to evaluate how systems would perform in an unattended setting, manually tweaking the test inputs or the generated output motion is not allowed. For systems with stochastic output, it is similarly not permitted to manually cherry pick which random samples are submitted for evaluation. Only automated processing is permitted at synthesis time.</Par>
         <Par>Non-deterministic systems, i.e., ones that use random-number generators to produce different output motion for the same input speech, must submit five random samples for each speech file in the test set.</Par>
+        <Par><strong>The test sequences will be shared after the submission form located at the bottom of the page is completed.</strong></Par>
 
         <SubHeading>Retention and distribution of submitted materials</SubHeading>
         <Par>All motion and other materials (e.g., form responses and system-description documents) that you submit to the challenge may be publicly released by the organisers. You retain ownership and still have the right to do whatever you like with your data and your documents.</Par>
