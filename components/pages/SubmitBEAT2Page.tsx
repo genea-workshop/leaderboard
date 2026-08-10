@@ -58,8 +58,8 @@ const CheckList: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
 );
 
 const SubmitBEAT2Page: React.FC = () => {
-  // const [showForm, setShowForm] = useState(false);
-  const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScwTIR43liXvuN0oF0OB0muLLjBa8t04UwuEJHj1XN8fykmtw/viewform?embedded=true';
+  // const [showForm, setShowForm] = useState(false); 
+  const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScGr9lxnI4bluoS5eX8dUSioC4Xz9wcj3IxO6bDLMl1ebaAkQ/viewform?embedded=true';
 
   return (
     <div className="mx-auto space-y-8">
