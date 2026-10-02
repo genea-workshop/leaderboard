@@ -7,7 +7,7 @@ const PAGES: { id: Page; label: string; slug: string; }[] = [
   { id: 'DataRelease', label: 'Data release', slug: 'data-release' },
   { id: 'Tooling', label: 'Tooling', slug: 'tooling' },
   { id: 'SubmitBEAT2', label: 'Submit BEAT2', slug: 'submit-beat2' },
-  { id: 'SubmitSeamless', label: 'Submit Seamless', slug: 'submit-seamless' },
+  // { id: 'SubmitSeamless', label: 'Submit Seamless', slug: 'submit-seamless' },
   { id: 'AboutUs', label: 'About Us', slug: 'about-us' },
 ];
 
